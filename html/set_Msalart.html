@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html data-dpr="1" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="../public/css/reset.css">
+	<link rel="stylesheet" href="../css/public.css">
+	<link rel="stylesheet" href="../css/set_salart.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="Expires" content="-1">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<script src="../public/js/jquery-1.8.2.min.js"></script>
+	<title>薪水设置月薪</title>
+</head>
+<body>
+	<div class="t_wrap">
+		<div class="l_wrap">
+			<a href="">
+				<img src="../img/向左.png" alt="">
+			</a>
+		</div>
+		<div class="title">薪酬设置</div>	
+	</div>
+	<!-- 搜索管理人员姓名 -->
+	<div class="searchbar">
+		<form action="" id="my_form">
+			<div class="form_group">
+				<button>
+					<img src="../img/search.png" alt="">
+				</button>
+				<input type="text" placeholder="搜索管理人员姓名">
+			</div>
+			
+		</form>
+	</div>
+
+	<!-- 管理人员基本信息列表 -->
+	<div class="container">
+		<div class="list_title">
+			<div class="name">姓名</div>
+			<div class="post">职位</div>
+			<div class="salart">薪酬</div>
+		</div>
+		<div class="person_list">
+			<div class="name">李强</div>
+			<div class="post">现场经理</div>
+			<div class="salart">
+				<a href="javascript:void(0)" class="set">设置</a>
+			</div>
+		</div>
+		<div class="person_list">
+			<div class="name">李强</div>
+			<div class="post">现场经理</div>
+			<div class="salart">
+				<a href="javascript:void(0)" class="set">设置</a>
+			</div>
+		</div>
+		<div class="person_list">
+			<div class="name">李强</div>
+			<div class="post">现场经理</div>
+			<div class="salart">
+				<a href="javascript:void(0)" class="set">设置</a>
+			</div>
+		</div>
+		<div class="person_list">
+			<div class="name">李强</div>
+			<div class="post">现场经理</div>
+			<div class="salart">
+				<a href="javascript:void(0)" class="set">设置</a>
+			</div>
+		</div>
+		<div class="person_list">
+			<div class="name">李强</div>
+			<div class="post">现场经理</div>
+			<div class="salart">
+				<a href="javascript:void(0)" class="set">设置</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- 设置年薪弹窗 -->
+	<div class="set_salart_wrap" style="display: none;">
+		<div class="set_container">
+			<div class="con">
+				<div class="t">
+					<a href="javascript:void(0)" class="td selected">月薪</a>
+					<a href="javascript:void(0)" class="dd">年薪</a>
+				</div>
+				<!-- 设置月薪 -->
+				<div class="set_month_salart set_salart">
+					<form action="" id="my_month">
+						<input type="text" placeholder="请输入金额" class="money">
+						<label for="">
+							元/月
+						</label>
+						<div class="s">
+							<input type="submit" value="确定">
+						</div>
+					</form>
+				</div>
+				<div class="set_year_salart set_salart" style="display: none;">
+					<form action="" id="my_year">
+						<input type="text" placeholder="请输入金额" class="money">
+						<label for="">
+							元/年
+						</label>
+						<div class="s">
+							<input type="submit" value="确定">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<script src="../js/init.js"></script>
+	<script>
+		// 点击设置月薪 年薪
+		$(".person_list").on("click",".set",function(){
+			$(".set_salart_wrap").show();
+
+
+			//月薪年薪切换
+			$(".set_salart_wrap .con .t").on("click",".td",function(){
+				$(".set_month_salart").show().siblings(".set_year_salart").hide();
+				$(this).addClass("selected").siblings(".dd").removeClass("selected");
+				console.log($(this))
+			}) 
+			$(".set_salart_wrap .con .t").on("click",".dd",function(){
+				$(".set_year_salart").show().siblings(".set_month_salart").hide();
+				$(this).addClass("selected").siblings(".td").removeClass("selected");
+			}) 
+		})
+
+
+	</script>
+</body>
+</html>

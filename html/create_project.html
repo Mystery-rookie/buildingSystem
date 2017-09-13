@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html data-dpr="1" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="../public/css/reset.css">
+	<link rel="stylesheet" href="../css/PM.css">
+	<link rel="stylesheet" href="../css/public.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="Expires" content="-1">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<script src="../public/js/jquery-1.8.2.min.js"></script>
+	<title>创建项目</title>
+</head>
+<body>
+	<div class="t_wrap">
+		<div class="l_wrap">
+			<a href="">
+				<img src="../img/向左.png" alt="">
+			</a>
+		</div>
+		
+		<div class="title">项目管理</div>	
+	</div>
+	<!--创建项目填写内容区  -->
+	<form action="" id="my_form">
+		<div class="form_group">
+			<div class="form_control">
+				<label for="">项目名称：</label>
+				<input type="text"
+					   id="projectname" 
+					   name="projectname"
+					   placeholder="请输入项目名称">
+			</div>
+			<div class="form_control">
+				<label for="">项目地址：</label>
+				<input type="text"
+					   id="projectaddress" 
+					   name="projectaddress"
+					   placeholder="请输入项目地址">
+			</div>
+			<div class="form_control add_position">
+				<label for="">添加职位：</label>
+				<input type="text" 
+					   id="position" 
+					   name="position" 
+					   readonly="readonly">
+				<div class="icon_right">
+					<img src="../img/向右.png" alt="">
+				</div>
+			</div>
+			<div class="position_group">
+				<div class="form_control position1">
+					<label for="">总经理：</label>
+					<input type="text"
+						   id="name" 
+						   name="name"
+						   placeholder="请输入姓名"
+						  class="add_position_control position_name">
+					<div class="icon_down" control_change="true">
+						<img src="../img/down.png" alt="">
+					</div>
+				</div>
+				<div class="tel_qx_wrap" style="display: none;">
+					<div class="form_control tel add_position_control"">
+						<label for=""></label>
+						<input type="tel"
+							   id="tel" 
+							   name="tel" 
+							   placeholder="请输入电话">
+					</div>
+					<!-- 权限 -->
+					<div class="qx_control add_position_control">
+						<label for="">权限：</label>
+						<div class="qx_wrap">
+							<ul class="list">
+								<li>
+									<div class="select"></div>
+									<span class="dd">创建项目</span>
+								</li>
+								<li>
+									<div class="select"></div>
+									<span class="dd">价格设置</span>
+								</li>
+								<li>
+									<div class="select"></div>
+									<span class="dd">薪酬设置</span>
+								</li>
+								<li>
+									<div class="select"></div>
+									<span class="dd">转账记录</span>
+								</li>
+								<li>
+									<div class="select"></div>
+									<span class="dd">库存记录</span>
+								</li>
+								<li>
+									<div class="select"></div>
+									<span class="dd">收支查询</span>
+								</li>
+								<li>
+									<div class="select"></div>
+									<span class="dd">项目结算</span>
+								</li>
+								<li>
+									<div class="select"></div>
+									<span class="dd">发布通知</span>
+								</li>
+							</ul>
+								<!-- 添加权限 -->
+							<div class="add_qx">
+								<img src="../img/叉.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			
+			
+			<div class="song">
+				<input type="submit" value='发送邀请'>
+			</div>
+		</div>
+	</form>
+	<!-- 添加职位弹窗 -->
+	<div class="position_container">
+		<div class="wrap_pos">
+			<p class="title">添加职位</p>
+			<!-- 职位选择 -->
+			<form action="#" class="position_select">
+				<div class="tj">
+					<input type="submit" value="确定" return="false">
+				</div>
+				<ul class="position_list">
+					<li>
+						<div class="td">
+							<div class="i_wrap">
+								<img src="../img/position1.png" alt="">
+								<div class="mb">
+									<img src="../img/勾.png" alt="">
+									<input type="radio">
+								</div>
+							</div>
+						</div>
+						<div class="dd">总经理</div>
+					</li>
+					<li>
+						<div class="td">
+							<div class="i_wrap">
+								<img src="../img/position2.png" alt="">
+								<div class="mb">
+									<img src="../img/勾.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="dd">财务总监</div>
+					</li>
+					<li>
+						<div class="td">
+							<div class="i_wrap">
+								<img src="../img/position3.png" alt="">
+								<div class="mb">
+									<img src="../img/勾.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="dd">技术总监</div>
+					</li>
+					<li>
+						<div class="td">
+							<div class="i_wrap">
+								<img src="../img/position4.png" alt="">
+								<div class="mb">
+									<img src="../img/勾.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="dd">现场经理</div>
+					</li>
+					<li>
+						<div class="td">
+							<div class="i_wrap">
+								<img src="../img/position5.png" alt="">
+								<div class="mb">
+									<img src="../img/勾.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="dd">现场财务</div>
+					</li>
+					<li>
+						<div class="td">
+							<div class="i_wrap">
+								<img src="../img/position6.png" alt="">
+								<div class="mb">
+									<img src="../img/勾.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="dd">现场总工</div>
+					</li>
+					<li>
+						<div class="td">
+							<div class="i_wrap">
+								<img src="../img/position7.png" alt="">
+								<div class="mb">
+									<img src="../img/勾.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="dd">现场技术</div>
+					</li>
+					<li>
+						<div class="add_wrap">
+							<img src="../img/叉.png" alt="">
+						</div>
+						<div class="dd">添加职位</div>
+					</li>
+				</ul>
+			</form>
+		</div>
+	</div>
+	<script src="../js/init.js"></script>
+	<script>
+		// 添加职位选择
+		// 控制点击状态
+		$(".position_list .i_wrap").on("click",".mb",function(){
+			if(!$(this).find("img").hasClass("position_selected")){
+				$(this).find("img").addClass("position_selected");
+				position_click=true;
+			}else{
+				$(this).find("img").removeClass("position_selected");
+				position_click=flase;
+			}
+			
+		})
+		$(function(){
+			//点击弹出职位选择框
+			
+			$(".icon_right").on("click",function(){
+				$(".position_container").show();
+				$(".tj").on("click","input",function(e){
+					e.stopPropagation();
+					$(".position_container").hide();
+				})
+			})
+			// 职位点击下拉填写基本信息
+			$(".icon_down").on("click",function(){
+				$(this).parents(".position1").siblings(".tel_qx_wrap").slideToggle(500);
+				if($(this).attr("control_change")=="true"){
+					$(this).find("img").attr("src","../img/up.png");
+					$(this).attr("control_change","false");
+				}else{
+					$(this).find("img").attr("src","../img/down.png");
+					$(this).attr("control_change","true");
+				}
+
+			})
+			//权限选择
+			$(".qx_wrap").on("click",".select",function(){
+				console.log($(this).hasClass("qx_selected"));
+				if($(this).hasClass("qx_selected")){
+					$(this).removeClass("qx_selected");
+				}else{
+					$(this).addClass("qx_selected");
+				}
+			})
+		})
+	</script>
+</body>
+</html>

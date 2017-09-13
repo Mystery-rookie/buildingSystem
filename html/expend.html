@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html data-dpr="1" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="../public/css/reset.css">
+	<link rel="stylesheet" href="../css/public.css">
+	<link rel="stylesheet" href="../css/in_out_curve.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="Expires" content="-1">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<script src="../public/js/jquery-1.8.2.min.js"></script>
+	<script src="../js/in_out_curve.js"></script>
+	<title>收支曲线支出</title>
+	<!-- <link rel="stylesheet" href="../public/"> -->
+</head>
+<body>
+	<div class="t_wrap">
+		<div class="l_wrap">
+			<a href="">
+				<img src="../img/向左.png" alt="">
+			</a>
+		</div>
+		
+		<div class="title">收支曲线</div>	
+		
+	</div>
+	<!-- 选择时间 -->
+		<div class="select_date">
+			<div class="prev">
+				<img src="../img/leftH.png" alt="">
+			</div>
+			<div class="center">
+				<div class="up_list">
+					<span class="td"></span>
+					<img src="../img/down.png" alt="" class="dd">
+				</div>
+				<div class="up_down_wrap">
+					
+				</div>
+				
+			</div>
+			<div class="next">
+				<img src="../img/rightH.png" alt="">
+			</div>
+		</div>
+		<!-- 选择项目部，选择利润 -->
+		<div class="proect_profit">
+			<ul class="select_list">
+				<li class="profit">
+					<span class="td">全部项目</span>
+					<img src="../img/down.png" alt="">
+					<div class="down">
+							<p>上海项目部</p>
+							<p>永兴项目部</p>
+							<p>绵阳项目部</p>
+					</div>
+				</li>
+				<li class="out_in">
+					<span class="td">支出</span>
+					<img src="../img/down.png" alt="">
+					<div class="down">
+						<p><a href="project_profit.html">利润</a></p>
+						<p><a href="income.html">收入</a></p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!-- 近6个月利润曲线 -->
+		<div class="profit_wrap">
+			<div class="title">
+				<p>近6个月支出曲线图</p>
+			</div>
+			<!-- 利润曲线图表 -->
+			<div class="chart_profit">
+				<div class="chart_up">
+					<div class="date">
+						<div class="unit">支出/万</div>
+						<p class="data">250</p>
+						<p class="data">200</p>
+						<p class="data">150</p>
+						<p class="data">100</p>
+						<p class="data">50</p>
+						<p class="init">0</p>
+					</div>
+					<div class="chart">
+						<!-- 画布 -->
+						<canvas id="myCanvas"></canvas>
+						<div class="total_profit">
+							累计支出：100万
+						</div>
+					</div>
+				</div>
+				<div class="chart_down">
+					<ul>
+						<li>1月</li>
+						<li>2月</li>
+						<li>3月</li>
+						<li>4月</li>
+						<li>5月</li>
+						<li>6月</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- 本月利润 -->
+		<div class="this_profit">
+			<div class="icon"></div>
+			<div class="total">本月支出：100万</div>
+		</div>
+		<!-- 收入 -->
+		<div class="in_out_wrap">
+			<div class="list">
+				<div class="total_list">
+					<div class="td">
+						<span>工资支出</span>
+					</div>
+					<div class="dd">
+						<span>180万</span>
+					</div>
+				</div>
+				<div class="intro">
+					<div class="intro_list">
+						<div class="td">
+							<span>高管</span>
+						</div>
+						<div class="dd">
+							<span>500万</span>
+						</div>
+					</div>
+					<div class="intro_list">
+						<div class="td">
+							<span>员工</span>
+						</div>
+						<div class="dd">
+							<span>500万</span>
+						</div>
+					</div>
+					<div class="icon_up">
+						<img src="../img/up.png" alt="">
+						<hr/>
+					</div>
+				</div>
+			</div>
+			<div class="list">
+				<div class="total_list">
+					<div class="td">
+						<span>工资支出</span>
+					</div>
+					<div class="dd">
+						<span>180万</span>
+					</div>
+				</div>
+				
+			</div>
+			<div class="list">
+				<div class="total_list">
+					<div class="td">
+						<span>工资支出</span>
+					</div>
+					<div class="dd">
+						<span>180万</span>
+					</div>
+				</div>
+				
+			</div>
+			<div class="list">
+				<div class="total_list">
+					<div class="td">
+						<span>工资支出</span>
+					</div>
+					<div class="dd">
+						<span>180万</span>
+					</div>
+				</div>
+				
+			</div>
+			<div class="list">
+				<div class="total_list">
+					<div class="td">
+						<span>工资支出</span>
+					</div>
+					<div class="dd">
+						<span>180万</span>
+					</div>
+				</div>
+				
+			</div>
+			<div class="list">
+				<div class="total_list">
+					<div class="td">
+						<span>工资支出</span>
+					</div>
+					<div class="dd">
+						<span>180万</span>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	<script src="../js/init.js"></script>
+	<script>
+		$(".in_out_wrap").on("click",".total_list",function(){
+			$(this).siblings(".intro").slideToggle(500);
+			// 上滑
+			// 鼠标点击状态
+			
+			$(".in_out_wrap .icon_up").on("click","img",function(e){
+				$(this).parents(".intro").slideUp(500);
+			})
+		})
+			
+	</script>
+</body>
+</html>

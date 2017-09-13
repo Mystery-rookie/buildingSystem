@@ -1,0 +1,165 @@
+/*搜索管理人员姓名*/
+.searchbar{
+	height: 0.75rem;
+	background: white;
+	margin-top:50px;
+	font-size: 0.26em;
+	position: relative;
+}
+.searchbar form .form_group{	
+	font-size: 0;
+	line-height: 0.6rem;
+	padding:0 0.075rem;
+	background: #f2f2f2;
+	border-radius: 0.3rem;
+	height: 0.6rem;
+	position: absolute;
+	top:50%;
+	margin-top:-0.3rem;
+	left:50%;
+	margin-left:-2.675rem;
+	width:5.35rem;
+	box-shadow:inset 0 2px 3px 0 #ccc;
+}
+.searchbar form .form_group button{	
+	font-size: 0.26rem;
+	border:0;
+	height: 0.6rem;
+	background: none;
+	width:0.6rem;
+}
+.searchbar form .form_group button img{	
+	width:0.24rem;
+	height: 0.24rem;
+	margin-bottom: 0.05rem;
+}
+.searchbar form .form_group input{	
+	font-size: 0.26rem;
+	border:none;
+	height: 0.6rem;
+	background: none;
+	width:4rem;
+}
+/*管理人员基本信息列表*/
+.container{
+	margin-top:0.2rem;
+}
+.container .list_title{
+	height: 0.8rem;
+	line-height: 0.8rem;
+}
+.container .list_title:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.container .list_title div{
+	float: left;
+	width:33.33%;
+	height: 100%;
+	line-height: 0.8rem;
+	font-size: 0.3em;
+	color:#4c4c4c;
+	text-align: center;
+}
+.container .person_list{
+	height: 0.8rem;
+	line-height: 0.8rem;
+	background: white;
+	margin-bottom: 0.1rem;
+	border-bottom: 1px solid #ddd;
+	font-size: 0.26em;
+}
+.container .person_list:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.container .person_list div{
+	float: left;
+	width:33.33%;
+	height: 100%;
+	color:#4c4c4c;
+	text-align: center;
+}
+.container .person_list .salart a{
+	color:#4c4c4c;
+}
+/*设置薪水弹窗*/
+.set_salart_wrap{
+	width:100%;
+	height: 100%;
+	position: fixed;
+	top:0;
+	left:0;
+	background: rgba(0,0,0,0.2);
+}
+.set_salart_wrap .set_container{
+	position: absolute;
+	bottom: 0;
+	left:0;
+	height: 3.33rem;
+	right: 0;
+	background: white;
+}
+.set_salart_wrap .set_container .con{
+	width:3.48rem;
+	height: 100%;
+	margin:0 auto;
+}
+.set_salart_wrap .set_container .con .t{
+	font-size: 0.3em;
+	margin-top:0.4rem;
+}
+.set_salart_wrap .set_container .con .t:after{
+	content: "";
+	display: block;
+	clear: left;
+}.set_salart_wrap .set_container .con .t a{
+	height: 0.45rem;
+	display: inline-block;
+}
+.set_salart_wrap .set_container .con .t .td{
+	float: left;
+	color:#4e4e4e;
+}
+.set_salart_wrap .set_container .con .t .dd{
+	float: right;
+	color:#4e4e4e;
+}
+/*选择设置类别样式*/
+.selected{
+	color:#ed710f !important;
+	border-bottom: 1px solid #ed710f;
+}
+.set_salart{
+	width:100%;
+	margin-top:0.3rem;
+	font-size: .3em;
+}
+.set_salart .money{
+	background: #f2f2f2;
+	width:2.5rem;
+	height: 0.6rem;
+	border-radius: 5px;
+	text-align: center;
+	border:0;
+	box-shadow:inset 0 2px 3px 0 #ccc;
+}
+.set_salart label{
+	color:#b2b2b2;
+	margin-left: 0.05rem;
+}
+.set_salart .s{
+	margin-top:0.45rem;
+	text-align: center;
+}
+.set_salart .s input{
+	width:2rem;
+	height: 0.6rem;
+	border:0;
+	background: #ed710f;
+	color:#ffffff;
+	border-radius: 5px;
+
+}

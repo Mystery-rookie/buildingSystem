@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html data-dpr="1" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="../public/css/reset.css">
+	<link rel="stylesheet" href="../css/public.css">
+	<link rel="stylesheet" href="../css/search_transfer.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="Expires" content="-1">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<script src="../public/js/jquery-1.8.2.min.js"></script>
+	<title>转账查询</title>
+</head>
+<body>
+	<div class="t_wrap">
+		<div class="l_wrap">
+			<a href="">
+				<img src="../img/向左.png" alt="">
+			</a>
+		</div>
+		
+		<div class="title">转账查询</div>	
+		
+	</div>
+	<!-- 选择时间 -->
+		<div class="select_date">
+			<div class="prev">
+				<img src="../img/leftH.png" alt="">
+			</div>
+			<div class="center">
+				<div class="up_list">
+					<span class="td"></span>
+					<img src="../img/down.png" alt="" class="dd">
+				</div>
+				<div class="up_down_wrap">
+					
+				</div>
+				
+			</div>
+			<div class="next">
+				<img src="../img/rightH.png" alt="">
+			</div>
+		</div>
+		<!-- 选择项目部，选择利润 -->
+		<div class="proect_profit">
+			<ul class="select_list">
+				<li class="profit">
+					<span class="td">全部项目部</span>
+					<img src="../img/down.png" alt="">
+					<div class="down">
+							<p>上海项目部</p>
+							<p>永兴项目部</p>
+							<p>绵阳项目部</p>
+					</div>
+				</li>
+				<li class="out_in">
+					<span class="td">利润</span>
+					<img src="../img/down.png" alt="">
+					<div class="down">
+						<p><a href="income.html">全部类型</a></p>
+						<p><a href="expend.html">他人转入</a></p>
+						<p><a href="expend.html">甲方付款</a></p>
+						<p><a href="expend.html">财务转出</a></p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!-- 转账清单 -->
+		<div class="transfer_list">
+			<div class="list">
+				<div class="td">
+					<div class="d1">
+						<img src="../img/矢量智能对象.png" alt="">
+						<span>2017/7/24</span>
+					</div>
+					<div class="p1">
+						<span>￥3000元</span>
+					</div>
+				</div>
+				<div class="dd">
+					<span>备注：钢铁转给老李3000元</span>
+				</div>
+			</div>
+			<div class="list">
+				<div class="td">
+					<div class="d1">
+						<img src="../img/矢量智能对象.png" alt="">
+						<span>2017/7/24</span>
+					</div>
+					<div class="p1">
+						<span>￥3000元</span>
+					</div>
+				</div>
+				<div class="dd">
+					<span>备注：钢铁转给老李3000元</span>
+				</div>
+			</div>
+			<div class="list">
+				<div class="td">
+					<div class="d1">
+						<img src="../img/矢量智能对象.png" alt="">
+						<span>2017/7/24</span>
+					</div>
+					<div class="p1">
+						<span>￥3000元</span>
+					</div>
+				</div>
+				<div class="dd">
+					<span>备注：钢铁转给老李3000元</span>
+				</div>
+			</div>
+			<div class="list">
+				<div class="td">
+					<div class="d1">
+						<img src="../img/矢量智能对象.png" alt="">
+						<span>2017/7/24</span>
+					</div>
+					<div class="p1">
+						<span>￥3000元</span>
+					</div>
+				</div>
+				<div class="dd">
+					<span>备注：钢铁转给老李3000元</span>
+				</div>
+			</div>
+		</div>
+	<script src="../js/init.js"></script>
+	<script>
+		// 初始化年份
+		// 获取当前月份
+		var mydate = new Date();
+		// 给月份赋值
+		var old_date = mydate.toLocaleDateString();
+		var arr = old_date.split("/");
+
+		var new_date = "";
+		for (var i = 0; i < arr.length - 1; i++) {
+			if (i > 0) {
+				new_date += "."
+			}
+			new_date += arr[i];
+		}
+		var new_date_text = "本月（" + new_date + "）";
+		// 给本月赋值
+		$(".up_list .td").text(new_date_text);
+		// 给下拉框选择月份赋值
+		var Html1 = "<p class='list1'>" + new_date_text + "</p>"
+		$(".up_down_wrap").append(Html1);
+		//添加今年其它月份
+
+		// 拿到年份
+		var year = arr[0];
+		var add_month = "";
+		var month = arr[1] * 1;
+		// 循环月份
+		for (var i = 1; i < month; i++) {
+			var Html = "<p class='list2'>" + year + "." + i + "</p>";
+			$(".up_down_wrap").append(Html);
+		}
+
+		$(".proect_profit .select_list").on("click", "li", function() {
+			$(this).find(".down").slideToggle(500);
+		})
+		// 选择时间
+
+		$(".select_date .center").on("click", ".up_list", function() {
+			$(this).siblings(".up_down_wrap").slideToggle(500);
+		})
+		$(".up_down_wrap").on("click", "p", function() {
+			var text = $(this).text();
+			var m = text.substr(text.length - 1, 1) * 1;
+			var index = 1;
+			while (isNaN(m)) {
+				index++;
+				m = text.substr(text.length - index, 1) * 1;
+			}
+			$(this).parents(".up_down_wrap").hide().siblings(".up_list").find(".td").text(text);
+		})
+
+		var select_month = false;
+		$(".select_date").on("click", ".prev,.next", function() {
+			switch ($(this).attr("class")) {
+				case "prev":
+					year -= 1;
+					break;
+				case "next":
+					year += 1;
+					break;
+			}
+			var content = year + ".1";
+			$(this).siblings(".center").find(".td").text(content);
+			if (year < arr[0]) {
+
+			} else if (year = arr[0]) {
+				location.reload();
+				select_month = false;
+			} else {
+
+			}
+			if (!select_month) {
+				$(this).siblings(".center").find(".up_down_wrap").children().remove();
+				for (var i = 1; i <= 12; i++) {
+					var text = "<p class='list2'>" + year + "." + i + "</p>";
+					$(this).siblings(".center").find(".up_down_wrap").append(text);
+				}
+				select_month = true;
+			}
+
+		})
+
+
+
+			
+	</script>
+</body>
+</html>

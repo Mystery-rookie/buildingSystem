@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html data-dpr="1" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="../public/css/reset.css">
+	<link rel="stylesheet" href="../css/public.css">
+	<link rel="stylesheet" href="../css/PM.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="Expires" content="-1">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<script src="../public/js/jquery-1.8.2.min.js"></script>
+	<title>项目管理</title>
+	<!-- <link rel="stylesheet" href="../public/"> -->
+</head>
+<body>
+	<div class="t_wrap">
+		<div class="l_wrap">
+			<a href="">
+				<img src="../img/向左.png" alt="">
+			</a>
+		</div>
+		
+		<div class="title">项目管理</div>	
+	</div>
+	<div class="wrap">
+		<div class="menu1">
+			<img src="../img/矢量智能对象.png" alt="" class="r_i">
+			<span class="p_center">广东项目部</span>
+			<div class="down_arrow">
+				<img src="../img/向右.png" alt="" class="right_arrow">
+			</div>
+		</div>
+		<div class="menu1">
+			<img src="../img/矢量智能对象.png" alt="" class="r_i">
+			<span class="p_center">广东项目部</span>
+			<div class="down_arrow">
+				<img src="../img/向右.png" alt="" class="right_arrow">
+			</div>
+		</div>
+		<div class="menu1">
+			<img src="../img/矢量智能对象.png" alt="" class="r_i">
+			<span class="p_center">广东项目部</span>
+			<div class="down_arrow">
+				<img src="../img/向右.png" alt="" class="right_arrow">
+			</div>
+			<div class="pull_down" style="display: none;">
+				<div class="menu2" >
+					<span class="m1">总经理</span>
+					<div class="down_arrow1">
+						<img src="../img/down.png" alt="" class="m2">
+					</div>
+				</div>
+				<div class="menu2">
+					<span class="m1">现场经理</span>
+					<div class="down_arrow1">
+						<img src="../img/down.png" alt="" class="m2">
+					</div>
+					<!-- 现场经理下拉菜单 -->
+					<div class="menu3" style="display: none;">
+						<form action="">
+							<div class="project_list">
+								<span class="td">名字：</span>
+								<input type="text" class="dd" name="name" value="杨磊">
+							</div>
+							<div class="project_list">
+								<span class="td">电话：</span>
+								<input type="text" class="dd" name="tel" value="13821472210">
+							</div>
+							<div class="qx">
+								<span class="td">
+									权限：
+								</span>
+								<div class="qx_list">
+									<ul class="list">
+										<li>
+											<div class="select qx_selected"></div>
+											<span class="dd">创建项目</span>
+										</li>
+										<li>
+											<div class="select qx_selected"></div>
+											<span class="dd">价格设置</span>
+										</li>
+										<li>
+											<div class="select qx_selected"></div>
+											<span class="dd">薪酬设置</span>
+										</li>
+										<li>
+											<div class="select qx_selected"></div>
+											<span class="dd">转账记录</span>
+										</li>
+										<li>
+											<div class="select qx_selected"></div>
+											<span class="dd">库存记录</span>
+										</li>
+										<li>
+											<div class="select qx_selected"></div>
+											<span class="dd">收支查询</span>
+										</li>
+										<li>
+											<div class="select qx_selected"></div>
+											<span class="dd">项目结算</span>
+										</li>
+										<li>
+											<div class="select qx_selected"></div>
+											<span class="dd">发布通知</span>
+										</li>
+									</ul>
+										<!-- 添加权限 -->
+									<div class="add_qx">
+										<img src="../img/叉.png" alt="">
+									</div>
+								</div>
+								<!-- 发送邀请 -->
+								<div class="song">
+									<a href="">确定邀请</a>
+								</div>
+							</div>
+						</form>
+						
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<!-- 添加项目 -->
+	<div class="add_project">
+		<a href="">添加项目</a>
+	</div>
+	<script src="../js/init.js"></script>
+	<script>
+		// 一级菜单点击弹出下拉菜单
+		// 控制图标方向
+		var icon_direction1=false;
+		var icon_direction2=false;
+		$(".down_arrow").on("click",function(){
+			$(this).parents(".menu1").find(".pull_down").slideToggle(500);
+			if(!icon_direction1){
+				$(this).find("img").attr("src","../img/up1.png").addClass("change");
+				icon_direction1=true;
+			}else{
+				$(this).find("img").attr("src","../img/向右.png").removeClass("change");
+				icon_direction1=false;
+			}
+			
+		})
+		// 点击弹出下拉菜单
+		$(".down_arrow1").on("click",function(){
+			$(this).parents(".menu2").find(".menu3").slideToggle(500);
+			if(!icon_direction2){
+				$(this).find("img").attr("src","../img/up.png");
+				icon_direction2=true;
+			}else{
+				$(this).find("img").attr("src","../img/down.png");
+				icon_direction2=false;
+			}
+		})
+		// 点击选中权限
+		
+		$(".qx_list .list").on("click",".select",function(){
+			if($(this).hasClass("qx_selected")){
+				$(this).removeClass("qx_selected");
+			}else{
+				$(this).addClass("qx_selected");
+			}
+		})
+		// 把添加项目放到页面底部
+			
+	</script>
+</body>
+</html>

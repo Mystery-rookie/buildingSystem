@@ -1,0 +1,306 @@
+/*选择时间*/
+.select_date{
+	height: 0.62rem;
+	padding:0 0.2rem;
+	line-height: 0.62rem;
+	margin-top:50px;
+	font-size: 0.28em;
+	position: relative;
+}
+.select_date:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.select_date .prev,.select_date .next{
+	width:0.6rem;
+	height: 100%;
+}
+.select_date .prev img,.select_date .next img{
+	width:0.2rem;
+	height: 0.31rem;
+}
+.select_date .prev{
+	float:left;
+	text-align: left;
+}
+.select_date .next{
+	float:right;
+	text-align: right;
+}
+.select_date .center{
+	position: absolute;
+	height: 100%;
+	text-align: center;
+	left: 1.5rem;
+	right: 1.5rem;
+}
+.select_date .center span{
+	color:#999999;
+}
+.select_date .center img{
+	width:0.14rem;
+	height: 0.07rem;
+	margin-left: 0.05rem;
+}
+.select_date .center .up_down_wrap{
+	position: absolute;
+	top:0.62rem;
+	left:2.2rem;
+	right: 0.19rem;
+	background: white;
+	box-shadow: 0 2px 1px 1px #ddd;
+	z-index: 101;
+	line-height: 0.4rem;
+	padding-bottom: 0.1rem;
+	display: none;
+}
+.select_date .center .up_down_wrap p{
+	text-align: left;
+	margin-left: 0.2rem;
+	color:#999999;
+	font-size: 0.28rem;
+}
+/*<!-- 选择项目部，选择利润 -->*/
+
+.proect_profit{
+	height: 0.62rem;
+	line-height: 0.62rem;
+	position: relative;
+	font-size: 0.26em;
+	background: white;
+	border-bottom: 1px solid #ddd;
+}
+.proect_profit .select_list:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.proect_profit .select_list li{
+	width:50%;
+	height: 0.4rem;
+	float: left;
+	line-height: 0.4rem;
+	text-align: center;
+	margin-top:0.11rem;
+	position: relative;
+}
+.proect_profit .select_list li:nth-child(1){
+	border-right: 1px solid #ddd;
+}
+.proect_profit .select_list li img{
+	width: .14rem;
+	height: 0.07rem;
+	margin-left: 0.05rem;
+}
+.proect_profit .select_list li span{
+	color: #999999;
+}
+.proect_profit .select_list li .down{
+	position: absolute;
+	top:0.51rem;
+	left:0;
+	background: white;
+	z-index: 100;
+	width:100%;
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 0.1rem;
+	display: none;
+}
+.proect_profit .select_list li .down p{
+	padding-right: 0.19rem;
+	color:#999999;
+}
+/*近6个月利润曲线*/
+
+.profit_wrap{
+	
+}
+.profit_wrap .title{
+	height:0.6rem;
+	padding-left: 0.2rem;
+	position: relative;
+	font-size: 0.28rem;
+}
+.profit_wrap .title p{
+	position: absolute;
+	color:#808080;
+	bottom: 0;
+}
+/*利润曲线图表*/
+.chart_profit{
+	height: 4rem;
+	background: white;
+	font-size: 0.2em;
+	padding-right: 0.2rem;
+	border-bottom:1px solid #ddd;
+	padding-top:0.1rem;
+}
+.chart_profit .chart_up{
+	height: 3.4rem;
+}
+.chart_profit .chart_up:after{
+	content: "";
+	display: block;
+	clear: both;
+	overflow: hidden;
+}
+.chart_profit .chart_up .date{
+	width:0.7rem;
+	height: 100%;
+	border-right: 1px solid #ddd;
+	float: left;
+	position: relative;
+}
+.chart_profit .chart_up .date .unit{
+	position: absolute;
+	left:0.7rem;
+	writing-mode:tb-rl;
+	color:#999999;
+}
+.chart_profit .chart_up .date p{
+	text-align: right;
+	padding-right: 0.05rem;
+	color:#999999;
+}
+.chart_profit .chart_up .date .data{
+	height: 20%;
+}
+.chart_profit .chart_up .date .init{
+	position: absolute;
+	bottom: -0.1rem;
+	width:100%;
+}
+
+.chart_profit .chart_up .chart{
+	float: left;
+	border-bottom: 1px solid #ddd;
+	width:6.53rem;
+	height: 100%;
+	position: relative;
+
+}
+.chart_profit .chart_up .chart .total_profit{
+	position: absolute;
+	bottom:0.3rem;
+	font-size: 1.2em;
+	color:#ed710f;
+	right: 0;
+	text-align: right;
+}
+.chart_profit .chart_up .chart canvas{
+	top:0;
+	left:0;
+	bottom:0;
+}
+.chart_profit .chart_down{
+	margin-left: 0.7rem;
+	height: 0.5rem;
+	line-height: 0.5rem;
+}
+/*月份*/
+.chart_profit .chart_down ul:after{
+	content: "";
+	display: block;
+	clear:both;
+}
+.chart_profit .chart_down ul li{
+	float: left;
+	height: 100%;
+	width:16.667%;
+	text-align: center;
+	color:#999999;
+}
+/*本月利润*/
+.this_profit{
+	position: relative;
+	height: 1.1rem;
+	padding-left: 0.2rem;
+	line-height: 1.1rem;
+ }
+ .this_profit:after{
+	content: "";
+	display: block;
+	clear:both;
+ }
+.this_profit .icon{
+	float: left;
+	width:0.1rem;
+	height: 0.1rem;
+	background: #ed710f;
+	border-radius: 50%;
+	margin-top:0.5rem;
+ }
+ .this_profit .total{
+	overflow: hidden;
+	height: 100%;
+	color:#999999;
+	margin-left: 0.2rem;
+	font-size: 0.3rem;
+ }
+
+ /*-------------收入------------------*/
+ /*支出清单*/
+.in_out_wrap .list{
+	font-size: 0.3em;
+	background: white;
+	border-bottom: 1px solid #ddd;
+}
+.in_out_wrap .list .total_list{
+	height: 1rem;
+	line-height: 1rem;
+	color: #4c4c4c;
+	margin-top: 0.2rem;
+}
+.in_out_wrap .list .intro{
+	display: none;
+}
+.in_out_wrap .list .intro .intro_list{
+	height: 0.65rem;
+	line-height: 0.65rem;
+}
+.in_out_wrap .list .total_list:after,.in_out_wrap .list .intro .intro_list:after{
+	content: "";
+	display: block;
+	clear:both;
+}
+.in_out_wrap .list .total_list .td,.in_out_wrap .list .intro .dd,.in_out_wrap .list .intro .td,.in_out_wrap .list .total_list .dd{
+	width:50%;
+	height: 100%;
+	float: left;
+}
+.in_out_wrap .list .total_list .td span{
+	margin-left: 0.6rem;
+}
+.in_out_wrap .list .total_list .dd{
+	text-align: right;
+}
+.in_out_wrap .list .total_list .dd span{
+	margin-right: 0.25rem;
+
+}
+.in_out_wrap .list .intro .intro_list .td span{
+	margin-left: 0.6rem;
+	color:#808080;
+}
+.in_out_wrap .list .intro .intro_list .dd{
+	text-align: right;
+}
+.in_out_wrap .list .intro .intro_list .dd span{
+	margin-right: 0.25rem;
+	color:#808080;
+}
+/*上拉图标*/
+.in_out_wrap .list .intro .icon_up{
+	margin-top:0.2rem;
+	text-align: center;
+	height: 0.75rem;
+}
+.in_out_wrap .list .intro .icon_up img{
+	width:0.3rem;
+	height: 0.17rem;
+}
+.in_out_wrap .list .intro .icon_up hr{
+	border:1px solid #eee;
+	margin-top:0.2rem;
+}

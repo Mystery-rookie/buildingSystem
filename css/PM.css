@@ -1,0 +1,459 @@
+
+.wrap{
+	padding-top:50px;
+}
+.menu1{
+	border-bottom: 1px solid #ddd;
+	padding:0 0.2rem;
+	background: white;
+	margin-bottom: 0.2rem;
+	font-size: 0.32em;
+	position: relative;
+}
+.menu1 .r_i{
+	width:0.27rem;
+	height: 0.26rem;
+	line-height: 1rem;
+}
+.menu1 .p_center{
+	color:#4c4c4c;
+	margin-left: 0.15rem;
+	line-height: 1rem;
+}
+.menu1 .down_arrow{
+	height: 1rem;
+	position: absolute;
+	left:0;
+	right: 0.2rem;
+	font-size: 0;
+	line-height: 1rem;
+	top:0;
+	text-align: right;
+}
+.menu1 .right_arrow{
+	width:0.09rem;
+	height: 0.19rem;
+	vertical-align: middle;
+}
+.menu1 .pull_down{
+	padding-left:0.42rem;
+}
+.menu1 .menu2{
+	width:100%;
+	position: relative;
+	font-size: 0.938em;
+}
+.menu1 .menu2 .m1{
+	font-size: 1em;
+	margin-left:4px;
+	color:#4d4d4d;
+	line-height: 1rem;
+}
+.menu1 .menu2 .m2{
+	width:0.14rem;
+	height: 0.07rem;
+	right: 0;
+}
+.menu1 .down_arrow1{
+	height: 1rem;
+	position: absolute;
+	right: 0;
+	left:0;
+	font-size: 0;
+	line-height: 1rem;
+	top:0;
+	text-align: right;
+}
+.menu1 .menu2 .menu3{
+	width:100%;
+	position: relative;
+	line-height: 1rem;
+	font-size: 0.938em;
+}
+.menu1 .menu2 .menu3 .project_list{
+	width:100%;
+	position: relative;
+	border-bottom:1px solid #ddd;
+	color:#4d4d4d;
+	text-indent: 0.938em;
+}
+.menu1 .menu2 .menu3 .project_list .td,.menu1 .menu2 .menu3 .project_list .dd{
+	margin-left: 4px;
+
+}
+.menu1 .menu2 .menu3 .project_list .dd{
+	border:none;
+
+}
+
+/*权限*/
+.menu3 .qx{
+	color:#4d4d4d;
+	text-indent: 0.938em;
+	position: relative;
+}
+.menu3 .qx:after{
+	content: "";
+	display: block;
+	clear:both;
+}
+.menu3 .qx .td{
+	float: left;
+	margin-left: 4px;
+}
+.menu3 .qx .qx_list{
+	overflow: hidden;
+	margin-left: 0px;
+}
+.menu3 .qx .qx_list .list li{
+	float:left;
+	width:50%;
+	height: 0.7rem;
+	text-indent: 0;
+	padding-left: 10px;
+}
+.menu3 .qx .qx_list .list:after{
+	content: "";
+	display: block;
+	clear:both;
+}
+.menu3 .qx .qx_list li .select{
+	display: inline-block;
+	width:0.2rem;
+	height: 0.2rem;
+	border:0.06rem solid #ed710f;
+	border-radius: 100%;
+	position: relative;
+	top:0.5px;
+}
+.menu3 .qx .qx_list li  span{
+	margin-left:0.17rem; 
+}
+
+/*添加权限*/
+.qx .add_qx{
+	text-indent: 0;
+}
+.qx .add_qx img{
+	width:0.45rem;
+	height: 0.45rem;
+}
+.qx .song{
+	text-align: right;
+}
+.qx .song a{
+	width:2rem;
+	height: 0.6rem;
+	display: inline-block;
+	color:#414244;
+	line-height: 0.6rem;
+	text-align: center;
+	background: #ed710f;
+	border-radius: 5px;
+	text-indent: 0;
+	margin-right: 0.8rem;
+}
+/*添加项目*/
+.add_project{
+	position: relative;
+}
+.add_project a{
+	display: inline-block;
+	position: absolute;
+	left:0.2rem;
+	right: 0.2rem;
+	height: 0.7rem;
+	background: #ed710f;
+	border-radius: 5px;
+	line-height: 0.7rem;
+	color:#fffffe;
+	text-align: center;
+	font-size: 0.3rem;
+}
+
+/*图标变化*/
+.change{
+	width:0.18rem !important;
+	height: 0.09rem !important;
+}
+/*权限选中*/
+.qx_selected{
+	background: #ed710f !important;
+}
+
+/*--------------创建项目--------------------*/
+#my_form{
+	margin-top: 50px;
+}
+.form_group .form_control{
+	width:100%;
+	height:1rem;
+	background: white;
+	font-size: 0.3em;
+	line-height: 1rem;
+	border-bottom:1px solid #ddd;
+}
+.form_group .form_control label{
+	width:1.8rem;
+	text-align: right;
+	display: inline-block;
+}
+.form_group .form_control input{
+	border:none;
+}
+/*添加职位*/
+.add_position{
+	position: relative;
+}
+.add_position input{
+	width:0;
+}
+.add_position .icon_right{
+	height: 1rem;
+	text-align: right;
+	right: 0;
+	left:1.9rem;
+	position: absolute;
+	top:0;
+}
+.add_position .icon_right img{
+	width:0.09rem;
+	height: 0.18rem;
+	margin-right: .2rem;
+}
+/*职位信息*/
+.position_group{
+	margin-top:0.2rem;
+}
+.position_group .position1{
+	position: relative;
+	
+}
+.position_group .icon_down{
+	width:1.8rem;
+	height: 1rem;
+	position: absolute;
+	top:0;
+	right: 0;
+	text-align: right;
+}
+.position_group .icon_down img{
+	width:0.14rem;
+	height: 0.07rem;
+	margin-right: 0.2rem;
+}
+/*控制添加职位*/
+.add_position_control{
+	
+}
+/*权限*/
+.qx_control{
+	width:100%;
+	font-size:0.28rem;
+	background: white;
+}
+.qx_control:after{
+	content: "";
+	display: block;
+	clear:both;
+}
+.qx_control label{
+	width:1.8rem;
+	float: left;
+	height: 1rem;
+	text-align: right;
+	line-height: 1rem;
+}
+.qx_control .qx_wrap{
+	margin-left: 1.8rem;
+	overflow: hidden;
+	line-height: 1rem;
+}
+.qx_control .qx_wrap .list:after{
+	content: "";
+	display: block;
+	clear:both;
+}
+.qx_control .qx_wrap .list li{
+	float:left;
+	height: 0.6rem;
+	width:50%;
+	padding-left: 10px;
+}
+.qx_control .qx_wrap .list li .select{
+	display: inline-block;
+	width:0.2rem;
+	height: 0.2rem;
+	border:0.06rem solid #ed710f;
+	border-radius: 100%;
+	position: relative;
+	top:0.5px;
+}
+.qx_control .qx_wrap .list li  span{
+	margin-left:0.17rem; 
+}
+.qx_wrap .add_qx{
+}
+.qx_wrap .add_qx img{
+	width:0.45rem;
+	height: 0.45rem;
+}
+
+/*发送邀请*/
+.form_group .song{
+	position: relative;
+	width:100%;
+	text-align: center;
+}
+.form_group .song input{
+	width:7rem;
+	height: 0.7rem;
+	border:0;
+	background: #ed710f;
+	border-radius: 5px;
+	line-height: 0.7rem;
+	color:#fffffe;
+	text-align: center;
+	font-size: 0.3rem;
+}
+/*添加职位弹窗*/
+.position_container{
+	position: absolute;
+	top:0;
+	left:0;
+	background-color: rgba(0,0,0,0.5);
+}
+.position_container{
+	display: none;
+	position: absolute;
+	top:0;
+	left:0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.5);
+}
+.position_container .wrap_pos{
+	position: absolute;
+	height: 6.2rem;
+	width:7rem; 
+	left:50%;
+	margin-left: -3.5rem;
+	background: #f2f2f2;
+	top:50%;
+	margin-top:-3.1rem;
+}
+.position_container .wrap_pos .title{
+	font-size: 0.36em;
+	text-align: center;
+	color:#242629;
+	margin-top:0.4rem;
+}
+.position_container .wrap_pos .position_select .tj{
+	padding-right: 0.3rem;
+	text-align: right;
+	font-size: 0.24rem;
+
+}
+.position_container .wrap_pos .position_select .tj input{
+	height:0.6rem;
+	width: 1.5rem;
+	border:0;
+	background: #ed710f;
+	color:#ffffff;
+	border-radius: 5px;
+	box-shadow: 0 0 0 1px #ccc;
+}
+/*职位选择*/
+.position_list:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.position_list li{
+	float:left;
+	width:25%;
+	text-align: center;
+	font-size: 0.24em;
+	height: 1.8rem;
+	margin-top:0.46rem;
+}
+.position_list li .td{
+	width:1.4rem;
+	height: 1.4rem;
+	border:1px solid #ddd;
+	background: #c3c3c3;
+	border-radius: 50%;
+	text-align: center;
+	display: inline-block;
+	font-size: 0;
+}
+.position_list li .td .i_wrap{
+	display: inline-block;
+	width:1.16rem;
+	height: 1.16rem;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 1.16rem;
+	position: relative;
+	background: white;
+	overflow: hidden;
+	margin-top:0.12rem;
+}
+.position_list li .td .i_wrap img{
+	max-width:1.16rem;
+	max-height: 1.16rem;
+}
+.position_list li .td .i_wrap .mb{
+	position: absolute;
+	top:0;
+	left:0;
+	bottom: 0;
+	right: 0;
+	background: rgba(0,0,0,0.5);
+	line-height: 1.16rem;
+	overflow: hidden;
+}
+.position_list li .td .i_wrap .mb img{
+	position: absolute;
+	width:0.44rem;
+	height: 0.34rem;
+	left:0.36rem;
+	top:0.41rem;
+	display: none;
+}
+.position_list li .td .i_wrap .mb input{
+	position: absolute;
+	top:-20px;
+	left:-20px;
+}
+.position_list li .td .i_wrap .mb{
+	position: absolute;
+	top:0;
+	left:0;
+	bottom: 0;
+	right: 0;
+	background: rgba(0,0,0,0.5);
+}
+.position_list li .dd{
+	text-align: center;
+	width:100%;
+	position: relative;
+	height: 0.5rem;
+	margin-top:2px;
+}
+/*职位选中样式*/
+.position_selected{
+	display: block !important;
+}
+.position_list li .add_wrap{
+	width:1.4rem;
+	height: 1.4rem;
+	display: inline-block;
+}
+.position_list li .add_wrap img{
+	width:1rem;
+	height: 1rem;
+	margin-top: 15px;
+}
+
+

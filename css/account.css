@@ -1,0 +1,239 @@
+/*选择项目部*/
+.select_project{
+	border-bottom:1px solid #ddd;
+	font-size: 0.26em;
+	background: white;
+}
+.select_project .select{
+	height: 0.78rem;
+	position: relative;
+	margin-top: 50px;
+	line-height: 0.78rem;
+}
+.select_project .td{
+	margin-left:0.2rem;
+	color:#999999 !important;
+}
+.select_project .icon_down{
+	width:50%;
+	position: absolute;
+	right: 0.2rem;
+	text-align: right;
+	height: 100%; 
+	top:0;
+}
+.select_project .icon_down img{
+	width:0.14rem;
+	height: 0.07rem;
+}
+.select_project  .project_list_wrap ul li{
+	height: 0.5rem;
+	line-height: 0.5rem;
+	color:#999999;
+	padding-left: 0.2rem;
+}
+/*总支出，总收入*/
+.total{
+	height: 1.6rem;
+	line-height: 1.6rem;
+	font-size: 0.3rem;
+	border-bottom: 1px solid #ddd;
+	background: white;
+	margin-top: 0.2rem;
+
+}
+.total:after{
+	content:"";
+	display: block;
+	clear:both;
+}
+.total .tt{
+	float:left;
+	width:0.69rem;
+	height: 1.14rem;
+	margin-top:0.23rem;
+	border-right:1px solid #ddd;
+	line-height: 1.14rem;
+	padding-right: 0.2rem;
+	text-align: right;
+}
+.total .tt span{
+	color:#ed710f;
+}
+
+
+.total .tc{
+	float:left;
+	width:3.05rem;
+	height: 100%;
+	padding-left: 0.25rem;
+	line-height: normal;
+}
+.total .tc p{
+	height: 33.33%;
+	color:#808080;
+	line-height: 0.53rem;
+}
+.total .tr{
+	overflow: hidden;
+	height: 100%;
+	margin-left: 4.19rem;
+}
+.total .tr{
+	overflow: hidden;
+	height: 100%;
+	margin-left: 4.19rem;
+	padding-right: 0.4rem;
+	text-align: right;
+}
+.total .tr  p{
+	height: 33.33%;
+	line-height: 0.53rem;
+}
+.total .tr  .a_account{
+	color:#808080;
+}
+.total .tr  .await_account{
+	color:#ed710f;
+}
+/*导航*/
+.nav_detail{
+	height: 1rem;
+	line-height: 1rem;
+	font-size: 0.3em;
+	background: white;
+	margin-top: 0.2rem;
+}
+.nav_detail:after{
+	content: "";
+	display: block;
+	clear:both;
+}
+.nav_detail  div{
+	text-align: center;
+	width:50%;
+	height: 100%;
+	float: left;
+}
+.nav_detail .out a{
+	
+}
+.in_out_change{
+	color:#ed710f !important;
+}
+.nav_detail .in a{
+	color:#4c4c4c;
+}
+/*支出清单*/
+.in_out_wrap{
+	margin-top:0.3rem;
+	position: relative;
+}
+.in_out_wrap .indicate{
+	position: absolute;
+	top:-0.2rem;
+	height: 0.2rem;
+	width:0.46rem;
+	left:5.4rem;
+	z-index: 100;
+	font-size: 0;
+}
+.in_out_wrap .in1{
+	left:1.6rem;
+}
+.in_out_wrap .indicate img{
+	height: 0.2rem;
+	width:0.46rem;
+}
+.in_out_wrap .list{
+	font-size: 0.3em;
+	background: white;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 0.2rem;
+}
+.in_out_wrap .list .total_list{
+	height: 1rem;
+	line-height: 1rem;
+	color: #4c4c4c;
+}
+.in_out_wrap .list .intro{
+	display: none;
+}
+.in_out_wrap .list .intro_out .intro_list{
+	height: 0.65rem;
+	line-height: 0.65rem;
+}
+.in_out_wrap .list .intro_out .total_list:after,.in_out_wrap .list .intro_out .intro_list:after{
+	content: "";
+	display: block;
+	clear:both;
+}
+.in_out_wrap .list  .total_list .td,.in_out_wrap .list .intro_out .dd,.in_out_wrap .list .intro_out .td,.in_out_wrap .list .total_list .dd{
+	width:50%;
+	height: 100%;
+	float: left;
+}
+.in_out_wrap .list .total_list .td span{
+	margin-left: 0.6rem;
+}
+.in_out_wrap .list .total_list .dd{
+	text-align: right;
+}
+.in_out_wrap .list .total_list .dd span{
+	margin-right: 0.25rem;
+
+}
+.in_out_wrap .list .intro_out .intro_list .td span{
+	margin-left: 0.6rem;
+	color:#808080;
+}
+.in_out_wrap .list .intro_out .intro_list .dd{
+	text-align: right;
+}
+.in_out_wrap .list .intro_out .intro_list .dd span{
+	margin-right: 0.25rem;
+	color:#808080;
+}
+/*上拉图标*/
+.in_out_wrap .list .intro .icon_up{
+	margin-top:0.2rem;
+	text-align: center;
+	height: 0.75rem;
+}
+.in_out_wrap .list .intro .icon_up img{
+	width:0.3rem;
+	height: 0.17rem;
+}
+.in_out_wrap .list .intro .icon_up hr{
+	border:1px solid #eee;
+	margin-top:0.2rem;
+}
+/*收入明细*/
+.in_out_wrap .list .intro_in .intro_list:after{
+	content:"";
+	clear: both;
+	display: block;
+}
+.in_out_wrap .list .intro_in .intro_list div{
+	width:33.33%;
+	float: left;
+	height: 0.65rem;
+	line-height: 0.65rem;
+}
+.in_out_wrap .list .intro_in .intro_list .td span{
+	margin-left: 0.6rem;
+	color:#808080;
+}
+.in_out_wrap .list .intro_in .intro_list .dd{
+	text-align: right;
+	padding-right: 0.2rem;
+}
+.in_out_wrap .list .intro_in .intro_list .dd span{
+	color:#808080;
+}
+.in_out_wrap .list .intro_in .intro_list .cd{
+	text-align: center;
+}
+.in_out_wrap .list .intro_in .intro_list .cd span{
+	color:#808080;
+}

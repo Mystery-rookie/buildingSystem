@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html data-dpr="1" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="../public/css/reset.css">
+	<link rel="stylesheet" href="../css/account.css">
+	<link rel="stylesheet" href="../css/public.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="Expires" content="-1">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<script src="../public/js/jquery-1.8.2.min.js"></script>
+	<title>项目结算支出</title>
+</head>
+<body>
+	<div class="t_wrap">
+		<div class="l_wrap">
+			<a href="">
+				<img src="../img/向左.png" alt="">
+			</a>
+		</div>
+		<div class="title">项目结算</div>	
+	</div>
+	<!-- 选择项目部 -->
+	<div class="select_project">
+		<div class="select">
+			<span class="td">
+				选择项目部
+			</span>
+			<div class="icon_down">
+				<img src="../img/down.png" alt="">
+			</div>
+		</div>
+		<!-- 项目部列表 -->
+		<div class="project_list_wrap" style="display: none;">
+			<ul class="list">
+				<li>项目部一</li>
+				<li>项目部二</li>
+				<li>项目部三</li>
+			</ul>
+		</div>
+		
+	</div>
+	<!-- 总支出和收入 -->
+	<div class="total">
+		<div class="tt">
+			<span>总</span>
+		</div>
+		<div class="tc">
+			<p>收入：500万</p>
+			<p>支出：500万</p>
+			<p>利润：500万</p>
+		</div>
+		<div class="tr">
+			<p class="a_account">甲方转账:500万</p>
+			<p></p>
+			<p class="await_account">待收账款:500万</p>
+		</div>
+	</div>
+	<!-- 收入支出明细 -->
+	<div class="nav_detail">
+		<div class="in">
+			<span class="in_out_change">总收入</span>
+		</div>
+		<div class="out">
+			<a href="project_account_out.html">总支出</a>
+		</div>
+	</div>
+	<!-- 支出清单 -->
+	<div class="in_out_wrap">
+		<div class="indicate in1">
+			<img src="../img/indicate.png" alt="">
+		</div>
+		<div class="list">
+			<div class="total_list">
+				<div class="td">
+					<span>产值收入</span>
+				</div>
+				<div class="dd">
+					<span>180万</span>
+				</div>
+			</div>
+			<div class="intro intro_in">
+				<div class="intro_list">
+					<div class="td">
+						<span>钢筋</span>
+					</div>
+					<div class="cd">
+						<span>500T</span>
+					</div>
+					<div class="dd">
+						<span>500万</span>
+					</div>
+				</div>
+				<div class="intro_list">
+					<div class="td">
+						<span>混凝土</span>
+					</div>
+					<div class="cd">
+						<span>500T</span>
+					</div>
+					<div class="dd">
+						<span>500万</span>
+					</div>
+				</div>
+				<div class="intro_list">
+					<div class="td">
+						<span>混凝土</span>
+					</div>
+					<div class="cd">
+						<span>500T</span>
+					</div>
+					<div class="dd">
+						<span>500万</span>
+					</div>
+				</div>
+				<div class="intro_list">
+					<div class="td">
+						<span>混凝土</span>
+					</div>
+					<div class="cd">
+						<span>500T</span>
+					</div>
+					<div class="dd">
+						<span>500万</span>
+					</div>
+				</div>
+				<div class="icon_up">
+					<img src="../img/up.png" alt="">
+					<hr/>
+				</div>
+			</div>
+		</div>
+		<div class="list">
+			<div class="total_list">
+				<div class="td">
+					<span>点工收入</span>
+				</div>
+				<div class="dd">
+					<span>180万</span>
+				</div>
+			</div>
+			
+		</div>
+		<div class="list">
+			<div class="total_list">
+				<div class="td">
+					<span>包工收入</span>
+				</div>
+				<div class="dd">
+					<span>180万</span>
+				</div>
+			</div>
+			
+		</div>
+		<div class="list">
+			<div class="total_list">
+				<div class="td">
+					<span>甲方奖金</span>
+				</div>
+				<div class="dd">
+					<span>180万</span>
+				</div>
+			</div>
+			
+		</div>
+		<div class="list">
+			<div class="total_list">
+				<div class="td">
+					<span>外包罚款</span>
+				</div>
+				<div class="dd">
+					<span>180万</span>
+				</div>
+			</div>
+			
+		</div>
+		<div class="list">
+			<div class="total_list">
+				<div class="td">
+					<span>材料扣款</span>
+				</div>
+				<div class="dd">
+					<span>180万</span>
+				</div>
+			</div>
+			
+		</div>
+		<div class="list">
+			<div class="total_list">
+				<div class="td">
+					<span>其它收入</span>
+				</div>
+				<div class="dd">
+					<span>180万</span>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<script src="../js/init.js"></script>
+	<script>
+		$(function(){
+			$(".in_out_wrap").on("click",".total_list",function(){
+				$(this).siblings(".intro").slideToggle(500);
+				// 上滑
+			// 鼠标点击状态
+			
+			$(".in_out_wrap .icon_up").on("click","img",function(e){
+				$(this).parents(".intro").slideUp(500);
+			})
+			})
+			// 选择项目部
+			$(".select_project .select").on("click",function(){
+				$(this).siblings(".project_list_wrap").slideToggle(500);
+			})
+			// 选择项目部
+			$(".project_list_wrap").on("click","li",function(){
+				var text = $(this).text();
+				$(".select_project .select .td").text(text);
+				$(this).parents(".project_list_wrap").hide();
+			})
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+/*选择时间*/
+.select_date{
+	height: 0.62rem;
+	padding:0 0.2rem;
+	line-height: 0.62rem;
+	margin-top:50px;
+	font-size: 0.28em;
+	position: relative;
+}
+.select_date:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.select_date .prev,.select_date .next{
+	width:0.6rem;
+	height: 100%;
+}
+.select_date .prev img,.select_date .next img{
+	width:0.2rem;
+	height: 0.31rem;
+}
+.select_date .prev{
+	float:left;
+	text-align: left;
+}
+.select_date .next{
+	float:right;
+	text-align: right;
+}
+.select_date .center{
+	position: absolute;
+	height: 100%;
+	text-align: center;
+	left: 1.5rem;
+	right: 1.5rem;
+}
+.select_date .center span{
+	color:#999999;
+}
+.select_date .center img{
+	width:0.14rem;
+	height: 0.07rem;
+	margin-left: 0.05rem;
+}
+.select_date .center .up_down_wrap{
+	position: absolute;
+	top:0.62rem;
+	left:2.2rem;
+	right: 0.19rem;
+	background: white;
+	box-shadow: 0 2px 1px 1px #ddd;
+	z-index: 101;
+	line-height: 0.4rem;
+	padding-bottom: 0.1rem;
+	display: none;
+}
+.select_date .center .up_down_wrap p{
+	text-align: left;
+	margin-left: 0.2rem;
+	color:#999999;
+	font-size: 0.28rem;
+}
+/*<!-- 选择项目部，选择利润 -->*/
+
+.proect_profit{
+	height: 0.62rem;
+	line-height: 0.62rem;
+	position: relative;
+	font-size: 0.26em;
+	background: white;
+	border-bottom: 1px solid #ddd;
+}
+.proect_profit .select_list:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.proect_profit .select_list li{
+	width:50%;
+	height: 0.4rem;
+	float: left;
+	line-height: 0.4rem;
+	text-align: center;
+	margin-top:0.11rem;
+	position: relative;
+}
+.proect_profit .select_list li:nth-child(1){
+	border-right: 1px solid #ddd;
+}
+.proect_profit .select_list li img{
+	width: .14rem;
+	height: 0.07rem;
+	margin-left: 0.05rem;
+}
+.proect_profit .select_list li span{
+	color: #999999;
+}
+.proect_profit .select_list li .down{
+	position: absolute;
+	top:0.51rem;
+	left:0;
+	background: white;
+	z-index: 100;
+	width:100%;
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 0.1rem;
+	display: none;
+}
+.proect_profit .select_list li .down p{
+	padding-right: 0.19rem;
+	color:#999999;
+}
+/*转账列表*/
+
+.transfer_list{
+	margin-top:0.4rem;
+	
+}
+.transfer_list .list{
+	font-size: 0.26em;
+}
+.transfer_list .list .td{
+	height: 0.55rem;
+	line-height: 0.55rem;
+	padding:0 0.2rem;
+}
+.transfer_list .list .td:after{
+	display: block;
+	clear:both;
+	content: "";
+}
+.transfer_list .list .td .d1{
+	width:50%;
+	height: 100%;
+	float:left;
+	position: relative;
+}
+.transfer_list .list .td .d1 img{
+	width:0.27rem;
+	height: 0.26rem;
+	position: absolute;
+	top:50%;
+	margin-top:-0.13rem;
+
+}
+.transfer_list .list .td .d1 span{
+	margin-left: 0.35rem;
+
+}
+.transfer_list .list .td .p1{
+	width:50%;
+	height: 100%;
+	float:left;
+	text-align: right;
+}
+.transfer_list .list .td .p1 span{
+	margin-right: 0.1rem;
+}
+.transfer_list .list .dd{
+	height: 1rem;
+	padding:0.1rem 0.2rem;
+	background: white;
+}
+.transfer_list .list .dd span{
+	margin-left: 0.35rem;
+}
