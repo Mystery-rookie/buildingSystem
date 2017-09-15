@@ -205,11 +205,12 @@ $(function() {
 	})
 	$(".up_down_wrap").on("click", "p", function() {
 			var text = $(this).text();
+			var m = text.substr(text.length - 3, 2) * 1;
+			initDate(m);
 			if(text==new_date){
 				text="本月（"+text+"）";
 			}
-			var m = text.substr(text.length - 3, 2) * 1;
-			initDate(m);
+			
 			$(this).parents(".up_down_wrap").hide().siblings(".up_list").find(".td").text(text);
 		})
 		// 选择年份
