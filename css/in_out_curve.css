@@ -46,8 +46,8 @@
 .select_date .center .up_down_wrap{
 	position: absolute;
 	top:0.62rem;
-	left:2.2rem;
-	right: 0.19rem;
+	left:1.2rem;
+	right: 1.19rem;
 	background: white;
 	box-shadow: 0 2px 1px 1px #ddd;
 	z-index: 101;
@@ -125,7 +125,7 @@
 .profit_wrap .title p{
 	position: absolute;
 	color:#808080;
-	bottom: 0;
+	bottom: 0.1rem;
 }
 /*利润曲线图表*/
 .chart_profit{
@@ -182,7 +182,7 @@
 }
 .chart_profit .chart_up .chart .total_profit{
 	position: absolute;
-	bottom:0.3rem;
+	bottom:0rem;
 	font-size: 1.2em;
 	color:#ed710f;
 	right: 0;
@@ -240,32 +240,54 @@
  }
 
  /*-------------收入------------------*/
- /*支出清单*/
+ /*清单*/
+/*清单*/
+.in_out_wrap{
+	margin-top:0.3rem;
+	position: relative;
+}
+.in_out_wrap .indicate{
+	position: absolute;
+	top:-0.2rem;
+	height: 0.2rem;
+	width:0.46rem;
+	left:5.4rem;
+	z-index: 100;
+	font-size: 0;
+}
+.in_out_wrap .in1{
+	left:1.6rem;
+}
+.in_out_wrap .indicate img{
+	height: 0.2rem;
+	width:0.46rem;
+}
 .in_out_wrap .list{
 	font-size: 0.3em;
 	background: white;
 	border-bottom: 1px solid #ddd;
+	margin-bottom: 0.2rem;
 }
 .in_out_wrap .list .total_list{
 	height: 1rem;
 	line-height: 1rem;
 	color: #4c4c4c;
-	margin-top: 0.2rem;
 }
 .in_out_wrap .list .intro{
+	border-top: 1px solid #ddd;
 	display: none;
 }
-.in_out_wrap .list .intro .intro_list{
+.in_out_wrap .list .intro_out .intro_list{
 	height: 0.65rem;
 	line-height: 0.65rem;
 }
-.in_out_wrap .list .total_list:after,.in_out_wrap .list .intro .intro_list:after{
+.in_out_wrap .list .intro_out .total_list:after,.in_out_wrap .list .intro_out .intro_list:after{
 	content: "";
 	display: block;
 	clear:both;
 }
-.in_out_wrap .list .total_list .td,.in_out_wrap .list .intro .dd,.in_out_wrap .list .intro .td,.in_out_wrap .list .total_list .dd{
-	width:50%;
+.in_out_wrap .list  .total_list .td,.in_out_wrap .list .intro_out .dd,.in_out_wrap .list .intro_out .td,.in_out_wrap .list .total_list .dd{
+	width:45%;
 	height: 100%;
 	float: left;
 }
@@ -276,18 +298,32 @@
 	text-align: right;
 }
 .in_out_wrap .list .total_list .dd span{
-	margin-right: 0.25rem;
+	
 
 }
-.in_out_wrap .list .intro .intro_list .td span{
+/*没有下拉内容个隐藏图标*/
+.icon_hidden{
+	display: none;
+}
+.in_out_wrap .list .total_list .down{
+	overflow: hidden;
+	height: 100%;
+	margin-left: 80%;
+	padding-right: 0.25rem;
+	text-align: right;
+}
+.in_out_wrap .list .total_list .down img{
+	width:0.14rem;
+	height: 0.07rem;
+}
+.in_out_wrap .list .intro_out .intro_list .td span{
 	margin-left: 0.6rem;
 	color:#808080;
 }
-.in_out_wrap .list .intro .intro_list .dd{
+.in_out_wrap .list .intro_out .intro_list .dd{
 	text-align: right;
 }
-.in_out_wrap .list .intro .intro_list .dd span{
-	margin-right: 0.25rem;
+.in_out_wrap .list .intro_out .intro_list .dd span{
 	color:#808080;
 }
 /*上拉图标*/
@@ -304,3 +340,32 @@
 	border:1px solid #eee;
 	margin-top:0.2rem;
 }
+/*收入明细*/
+.in_out_wrap .list .intro_in .intro_list:after{
+	content:"";
+	clear: both;
+	display: block;
+}
+.in_out_wrap .list .intro_in .intro_list div{
+	width:30%;
+	float: left;
+	height: 0.65rem;
+	line-height: 0.65rem;
+}
+.in_out_wrap .list .intro_in .intro_list .td span{
+	margin-left: 0.6rem;
+	color:#808080;
+}
+.in_out_wrap .list .intro_in .intro_list .dd{
+	text-align: right;
+}
+.in_out_wrap .list .intro_in .intro_list .dd span{
+	color:#808080;
+}
+.in_out_wrap .list .intro_in .intro_list .cd{
+	text-align: center;
+}
+.in_out_wrap .list .intro_in .intro_list .cd span{
+	color:#808080;
+}
+

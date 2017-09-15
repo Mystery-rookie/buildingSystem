@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html data-dpr="1" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="../public/css/reset.css">
+	<link rel="stylesheet" href="../css/public.css">
+	<link rel="stylesheet" href="../css/reglogin.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="Expires" content="-1">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<script src="../public/js/jquery-1.8.2.min.js"></script>
+	<title>登陆</title>
+	<script src="../js/backPage.js"></script>
+	<style>
+		
+	</style>
+</head>
+<body>
+	<div class="t_wrap">
+		<div class="l_wrap">
+			<a href="javascript:void(0)">
+				<img src="../img/向左.png" alt="">
+			</a>
+		</div>
+		
+		<div class="title">点金手</div>	
+	</div>
+	<div class="container">
+		<div class="logo">
+			<img src="../img/reglogin/logo.png" alt="">
+		</div>
+		<div class="form_wrap">
+			<form action="bossHome.html" id="reg_form">
+				<div class="form_group">
+					<label for="">手机号</label>
+					<input type="text" id="tel" class="tel" name="tel" placeholder="请输入手机号码">
+				</div>
+				<div class="form_group">
+					<label for="">密码</label>
+					<input type="password" id="password" class="password" name="password" placeholder="请输入密码">
+				</div>
+				<div class="submit">
+					<input type="submit" value="登陆" id="submit" disabled="true">
+				</div>
+			</form>
+			<div class="other">
+				<ul>
+					<li class="new"><a href="login1.html">新用户注册</a></li>
+					<li class="forget"><a href="forgetPassword1.html">忘记密码</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+	<script src="../js/init.js"></script>
+	<script>
+		$(function(){
+			// 验证手机正则
+			var reg=/^1[34578]\d{9}$/
+			$(".form_wrap").on("keyup",".tel,.password",function(){
+				var tel = $(".tel").val();
+				var password=$(".password").val();
+				console.log(tel,password)
+				if(reg.test(tel.trim())&&password.trim().length>=6&&password.trim().length<=20){
+					$("#submit").addClass("tj_sty").attr("disabled",false);
+				}else{
+					$("#submit").removeClass("tj_sty").attr("disabled",true);
+				}
+			})
+		})
+	</script>
+</body>
+</html>

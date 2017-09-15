@@ -1,0 +1,182 @@
+.container{
+	width:100%;
+	height: 100%;
+	background-color: white;
+	padding:0 0.3rem;
+	padding-top:50px;
+}
+.container .logo{
+	width:100%;
+	height: 3.15rem;
+	font-size: 0;
+	line-height: 3.15rem;
+	text-align: center;
+}
+.container .logo img{
+	width:1.69rem;
+	height: 1.46rem;
+	vertical-align: middle;
+}
+
+.form_wrap{
+	font-size: 0.34em;
+}
+.form_wrap .form_group{
+	border-bottom: 1px solid #ddd;
+	padding: 0.3rem 0;
+}
+.form_wrap .form_group label{
+	display: inline-block;
+	width:1.42rem;
+	padding:0 0.12rem; 
+	color:#333333;
+}
+.form_wrap .form_group input{
+	padding: 0.04rem 0.12rem;
+	border:0;
+}
+.form_wrap .submit{
+	margin-top: 0.3rem;
+}
+.form_wrap .submit input{
+	width:100%;
+	height: 0.8rem;
+	background: rgba(237,113,15,0.5);
+	color:#ffffff;
+	border:0;
+	border-radius: 5px;
+}
+.other{
+	margin-top: 0.3rem;
+	font-size: 0.882em;
+}
+.other ul:after{
+	content: "";
+	display: block;
+	clear:both;
+}
+.other ul li{
+	float: left;
+	width:50%;
+}
+.other ul .new{
+	text-align: left;
+}
+.other ul .forget{
+	text-align: right;
+}
+.other ul li a{
+	color:#f98914;
+}
+
+/*-------注册一------------------手机验证*/
+.form_wrap_login{
+	font-size: 0.34em;
+	margin-top:0.4rem;
+}
+.form_wrap_login .form_group{
+	border-bottom: 1px solid #ddd;
+	padding: 0.3rem 0;
+}
+.form_wrap_login .form_group label{
+	display: inline-block;
+	width:1.8rem;
+	padding:0 0.12rem; 
+	color:#333333;
+}
+.form_wrap_login .form_group input{
+	padding: 0.04rem 0.12rem;
+	border:0;
+}
+.form_wrap_login .submit{
+	margin-top: 0.3rem;
+}
+.form_wrap_login .submit input{
+	width:100%;
+	height: 0.8rem;
+	background: rgba(237,113,15,0.5);
+	color:#ffffff;
+	border:0;
+	border-radius: 5px;
+}
+/*提交按钮透明度变化*/
+.tj_sty{
+	background: rgba(237,113,15,1) !important;
+}
+/*服务协议 隐私政策*/
+.login_other{
+	margin-top:10px;
+	font-size: 0.26em;
+}
+.login_other .o1{
+	text-align: center;
+	color:#999999;
+	margin-top: 0.3rem;
+}
+.login_other .o2{
+	text-align: center;
+	margin-top: 0.2rem;
+}
+.login_other .o2 a{
+	color:#f98914;
+}
+.login_other .o2 a:nth-child(2){
+	margin-left: 0.3rem;
+}
+/*---------填写验证码-------*/
+.hint{
+	height: 1.6rem;
+	line-height: 1.6rem;
+	text-align: center;
+}
+.hint .td{
+	color:#999999;
+	font-size: 0.3rem;
+}
+.hint .dd{
+	color:#333333;
+	font-size: 0.34rem;
+}
+.write_in{
+	text-align: center;
+	font-size: 0.34em;
+}
+.write_in input{
+	width:1rem;
+	height: 1rem;
+	border:1px solid white;
+	background: #f6f6f6;
+	border-radius: 10px;
+	text-align: center;
+	margin-right: 0.1rem;
+	margin-left: 0.1rem;
+}
+.again_get{
+	font-size: 0.26em;
+	margin-top: 0.6rem;
+	text-align: center;
+}
+.again_get a{
+	color:#999999;
+}
+.again_get span{
+	color:#999999;
+}
+/*-----------设置登陆密码----------*/
+.set_login_pass{
+	height: 1.4rem;
+	line-height: 2rem;
+	font-size: 0.32em;
+}
+.set_login_pass span{
+	color:#666666;
+}
+/*错误信息提示*/
+.errow_message{
+	font-size: 0.2em;
+	color:red;
+}
+/*输入验证码样式*/
+.yzm_inp{
+	border:1px solid #f98914 !important;
+}

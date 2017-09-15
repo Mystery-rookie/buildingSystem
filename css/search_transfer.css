@@ -46,8 +46,8 @@
 .select_date .center .up_down_wrap{
 	position: absolute;
 	top:0.62rem;
-	left:2.2rem;
-	right: 0.19rem;
+	left:1.2rem;
+	right: 1.19rem;
 	background: white;
 	box-shadow: 0 2px 1px 1px #ddd;
 	z-index: 101;
@@ -109,6 +109,9 @@
 }
 .proect_profit .select_list li .down p{
 	padding-right: 0.19rem;
+	color:#999999;
+}
+.proect_profit .select_list li .down p a{
 	color:#999999;
 }
 /*转账列表*/

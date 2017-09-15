@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html data-dpr="1" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="../public/css/reset.css">
+	<link rel="stylesheet" href="../css/public.css">
+	<link rel="stylesheet" href="../css/reglogin.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="Expires" content="-1">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<script src="../public/js/jquery-1.8.2.min.js"></script>
+	<title>填写验证码</title>
+	<script src="../js/backPage.js"></script>
+</head>
+<body>
+	<div class="t_wrap">
+		<div class="l_wrap">
+			<a href="javascript:void(0)">
+				<img src="../img/向左.png" alt="">
+			</a>
+		</div>
+		
+		<div class="title">填写验证码</div>	
+	</div>
+	<div class="container">
+		<div class="hint">
+			<span class="td">验证码已发送到手机：</span><span class="dd">180&nbsp;0023&nbsp;0793</span>
+		</div>
+		<div class="write_in">
+			<form action="" id="my_form_write">
+				<input type="text">
+				<input type="text">
+				<input type="text">
+				<input type="text">
+			</form>
+		</div>
+		<div class="again_get">
+			<a href="javascript:void(0)" id="re_yzm">从新获取验证码</a>
+			<span class="dd"></span>
+		</div>
+	</div>
+	
+	<script src="../js/init.js"></script>
+	<script>
+		$(function(){
+			// 重新发送验证码
+			
+			$("#re_yzm").on("click",function(){
+				$(this).attr("disabled",false);
+				var time = $(this).siblings(".dd");
+				time.text("（60）");
+				var index_time=60;
+				console.log(time)
+				var time_id = setInterval(function(){
+					if(index_time>0){
+						console.log(index_time);
+						index_time--;
+					}else{
+						time.text("");
+						clearInterval(time_id);
+					}
+					var text="（"+index_time+"）";
+					time.text(text);
+
+				},1000);
+			})
+			var index=0;
+			write();
+			function write(){
+				$("#my_form_write input").eq(index).attr("disabled",false).val("").addClass("yzm_inp").siblings("input").attr("disabled","true");
+				$("#my_form_write input").eq(index).focus();
+				$("#my_form_write input").eq(index).keyup(function(){
+					var val=$(this).val().trim();
+					if(index < 3){
+						if(isNaN(val)){
+						}else{
+							index++;
+							write();
+						}
+					}else{
+						window.location="./login3.html";
+						return;
+					}
+				})
+				
+			}
+
+			
+		})
+	</script>
+</body>
+</html>

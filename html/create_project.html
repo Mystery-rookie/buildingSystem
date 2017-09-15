@@ -13,12 +13,13 @@
 	<meta http-equiv="Expires" content="-1">
 	<meta http-equiv="Cache-Control" content="no-cache">
 	<script src="../public/js/jquery-1.8.2.min.js"></script>
+	<script src="../js/backPage.js"></script>
 	<title>创建项目</title>
 </head>
 <body>
 	<div class="t_wrap">
 		<div class="l_wrap">
-			<a href="">
+			<a href="javascript:void(0)">
 				<img src="../img/向左.png" alt="">
 			</a>
 		</div>
@@ -52,73 +53,11 @@
 					<img src="../img/向右.png" alt="">
 				</div>
 			</div>
-			<div class="position_group">
-				<div class="form_control position1">
-					<label for="">总经理：</label>
-					<input type="text"
-						   id="name" 
-						   name="name"
-						   placeholder="请输入姓名"
-						  class="add_position_control position_name">
-					<div class="icon_down" control_change="true">
-						<img src="../img/down.png" alt="">
-					</div>
-				</div>
-				<div class="tel_qx_wrap" style="display: none;">
-					<div class="form_control tel add_position_control"">
-						<label for=""></label>
-						<input type="tel"
-							   id="tel" 
-							   name="tel" 
-							   placeholder="请输入电话">
-					</div>
-					<!-- 权限 -->
-					<div class="qx_control add_position_control">
-						<label for="">权限：</label>
-						<div class="qx_wrap">
-							<ul class="list">
-								<li>
-									<div class="select"></div>
-									<span class="dd">创建项目</span>
-								</li>
-								<li>
-									<div class="select"></div>
-									<span class="dd">价格设置</span>
-								</li>
-								<li>
-									<div class="select"></div>
-									<span class="dd">薪酬设置</span>
-								</li>
-								<li>
-									<div class="select"></div>
-									<span class="dd">转账记录</span>
-								</li>
-								<li>
-									<div class="select"></div>
-									<span class="dd">库存记录</span>
-								</li>
-								<li>
-									<div class="select"></div>
-									<span class="dd">收支查询</span>
-								</li>
-								<li>
-									<div class="select"></div>
-									<span class="dd">项目结算</span>
-								</li>
-								<li>
-									<div class="select"></div>
-									<span class="dd">发布通知</span>
-								</li>
-							</ul>
-								<!-- 添加权限 -->
-							<div class="add_qx">
-								<img src="../img/叉.png" alt="">
-							</div>
-						</div>
-					</div>
-				</div>
+			<!-- 设置职位 -->
+			<div class="container">
 				
 			</div>
+			
 			
 			
 			<div class="song">
@@ -133,7 +72,7 @@
 			<!-- 职位选择 -->
 			<form action="#" class="position_select">
 				<div class="tj">
-					<input type="submit" value="确定" return="false">
+					<input type="submit" value="确定" return="false" id="submit">
 				</div>
 				<ul class="position_list">
 					<li>
@@ -142,7 +81,7 @@
 								<img src="../img/position1.png" alt="">
 								<div class="mb">
 									<img src="../img/勾.png" alt="">
-									<input type="radio">
+									<input type="radio" class="position" name="position">
 								</div>
 							</div>
 						</div>
@@ -154,6 +93,7 @@
 								<img src="../img/position2.png" alt="">
 								<div class="mb">
 									<img src="../img/勾.png" alt="">
+									<input type="radio" class="position" name="position">
 								</div>
 							</div>
 						</div>
@@ -165,6 +105,7 @@
 								<img src="../img/position3.png" alt="">
 								<div class="mb">
 									<img src="../img/勾.png" alt="">
+									<input type="radio" class="position" name="position">
 								</div>
 							</div>
 						</div>
@@ -176,6 +117,7 @@
 								<img src="../img/position4.png" alt="">
 								<div class="mb">
 									<img src="../img/勾.png" alt="">
+									<input type="radio" class="position" name="position">
 								</div>
 							</div>
 						</div>
@@ -187,6 +129,7 @@
 								<img src="../img/position5.png" alt="">
 								<div class="mb">
 									<img src="../img/勾.png" alt="">
+									<input type="radio" class="position" name="position">
 								</div>
 							</div>
 						</div>
@@ -198,6 +141,7 @@
 								<img src="../img/position6.png" alt="">
 								<div class="mb">
 									<img src="../img/勾.png" alt="">
+									<input type="radio" class="position" name="position">
 								</div>
 							</div>
 						</div>
@@ -209,6 +153,7 @@
 								<img src="../img/position7.png" alt="">
 								<div class="mb">
 									<img src="../img/勾.png" alt="">
+									<input type="radio" class="position" name="position">
 								</div>
 							</div>
 						</div>
@@ -231,10 +176,10 @@
 		$(".position_list .i_wrap").on("click",".mb",function(){
 			if(!$(this).find("img").hasClass("position_selected")){
 				$(this).find("img").addClass("position_selected");
-				position_click=true;
+				$(this).find("input").attr("checked",true);
 			}else{
 				$(this).find("img").removeClass("position_selected");
-				position_click=flase;
+				$(this).find("input").attr("checked",false);
 			}
 			
 		})
@@ -242,33 +187,65 @@
 			//点击弹出职位选择框
 			
 			$(".icon_right").on("click",function(){
+				position=[];
 				$(".position_container").show();
 				$(".tj").on("click","input",function(e){
 					e.stopPropagation();
 					$(".position_container").hide();
 				})
 			})
-			// 职位点击下拉填写基本信息
-			$(".icon_down").on("click",function(){
-				$(this).parents(".position1").siblings(".tel_qx_wrap").slideToggle(500);
-				if($(this).attr("control_change")=="true"){
-					$(this).find("img").attr("src","../img/up.png");
-					$(this).attr("control_change","false");
-				}else{
-					$(this).find("img").attr("src","../img/down.png");
-					$(this).attr("control_change","true");
-				}
+			
+			
+			// 数组装选中的职位
+			var position=[];
+			// 提交职位
+		
+			$("#submit").on("click",function(){
+				$(".container").children().remove();
+				$(".position_list .i_wrap .mb img").each(function(i,c){
+					if($(c).hasClass("position_selected")){
+						var text = $(this).parents(".td").siblings(".dd").text();
+							position.push(text);
+					}
+				})
+				// 给页面赋值，添加选中的职位，填写基本信息
+				position.forEach(function(c){
+					console.log(c);
+					var t=positionModule(c);
+					$(".container").append(t);
+				})
+				// 职位点击下拉填写基本信息
+				$(".icon_down").on("click",function(){
+					$(this).parents(".position1").siblings(".tel_qx_wrap").slideToggle(500);
+					if($(this).attr("control_change")=="true"){
+						$(this).find("img").attr("src","../img/up.png");
+						$(this).attr("control_change","false");
+					}else{
+						$(this).find("img").attr("src","../img/down.png");
+						$(this).attr("control_change","true");
+					}
 
+				})
+				//权限选择
+				$(".qx_wrap").on("click",".select",function(){
+					console.log($(this).hasClass("qx_selected"));
+					if($(this).hasClass("qx_selected")){
+						$(this).removeClass("qx_selected");
+					}else{
+						$(this).addClass("qx_selected");
+					}
+				})
+				$(this).parents(".position_container").hide();
+				return false;
+				
 			})
-			//权限选择
-			$(".qx_wrap").on("click",".select",function(){
-				console.log($(this).hasClass("qx_selected"));
-				if($(this).hasClass("qx_selected")){
-					$(this).removeClass("qx_selected");
-				}else{
-					$(this).addClass("qx_selected");
-				}
-			})
+
+			// 组件职位设置
+			function positionModule(content){
+				var text = `<div class='position_group'><div class='form_control position1'><label for=''>`+content+`：</label><input type='text'id='name' name='name'placeholder='请输入姓名'class='add_position_control position_name'><div class='icon_down' control_change='true'><img src='../img/down.png' alt=''></div></div><div class='tel_qx_wrap' style='display: none;'><div class='form_control tel add_position_control''><label for=''></label><input type='tel'id='tel' name='tel' placeholder='请输入电话'></div><!-- 权限 --><div class='qx_control add_position_control'><label for=''>权限：</label><div class='qx_wrap'><ul class='list'><li><div class='select'></div><span class='dd'>创建项目</span></li><li><div class='select'></div><span class='dd'>价格设置</span></li><li><div class='select'></div><span class='dd'>薪酬设置</span></li><li><div class='select'></div><span class='dd'>转账记录</span></li><li><div class='select'></div><span class='dd'>库存记录</span></li><li><div class='select'></div><span class='dd'>收支查询</span></li><li><div class='select'></div><span class='dd'>项目结算</span></li><li><div class='select'></div><span class='dd'>发布通知</span></li></ul><!-- 添加权限 --><div class='add_qx'><img src='../img/叉.png' alt=''></div></div></div></div></div>`;
+				return text; 
+			}
+			
 		})
 	</script>
 </body>

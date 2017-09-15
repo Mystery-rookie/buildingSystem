@@ -15,12 +15,12 @@
 	<script src="../public/js/jquery-1.8.2.min.js"></script>
 	<script src="../js/in_out_curve.js"></script>
 	<title>收支曲线支出</title>
-	<!-- <link rel="stylesheet" href="../public/"> -->
+	<script src="../js/backPage.js"></script>
 </head>
 <body>
 	<div class="t_wrap">
 		<div class="l_wrap">
-			<a href="">
+			<a href="javascript:void(0)">
 				<img src="../img/向左.png" alt="">
 			</a>
 		</div>
@@ -53,7 +53,7 @@
 				<li class="profit">
 					<span class="td">全部项目</span>
 					<img src="../img/down.png" alt="">
-					<div class="down">
+					<div class="down projectpart">
 							<p>上海项目部</p>
 							<p>永兴项目部</p>
 							<p>绵阳项目部</p>
@@ -111,18 +111,24 @@
 			<div class="icon"></div>
 			<div class="total">本月支出：100万</div>
 		</div>
-		<!-- 收入 -->
+		<!-- 支出 -->
 		<div class="in_out_wrap">
+			<div class="indicate">
+				<img src="../img/indicate.png" alt="">
+			</div>
 			<div class="list">
 				<div class="total_list">
 					<div class="td">
-						<span>工资支出</span>
+						<span>工资</span>
 					</div>
 					<div class="dd">
 						<span>180万</span>
 					</div>
+					<div class="down">
+						<img src="../img/down.png" alt="">
+					</div>
 				</div>
-				<div class="intro">
+				<div class="intro intro_out">
 					<div class="intro_list">
 						<div class="td">
 							<span>高管</span>
@@ -148,7 +154,7 @@
 			<div class="list">
 				<div class="total_list">
 					<div class="td">
-						<span>工资支出</span>
+						<span>租赁费</span>
 					</div>
 					<div class="dd">
 						<span>180万</span>
@@ -159,7 +165,7 @@
 			<div class="list">
 				<div class="total_list">
 					<div class="td">
-						<span>工资支出</span>
+						<span>报销费</span>
 					</div>
 					<div class="dd">
 						<span>180万</span>
@@ -170,35 +176,12 @@
 			<div class="list">
 				<div class="total_list">
 					<div class="td">
-						<span>工资支出</span>
+						<span>其它</span>
 					</div>
 					<div class="dd">
 						<span>180万</span>
 					</div>
-				</div>
-				
-			</div>
-			<div class="list">
-				<div class="total_list">
-					<div class="td">
-						<span>工资支出</span>
-					</div>
-					<div class="dd">
-						<span>180万</span>
-					</div>
-				</div>
-				
-			</div>
-			<div class="list">
-				<div class="total_list">
-					<div class="td">
-						<span>工资支出</span>
-					</div>
-					<div class="dd">
-						<span>180万</span>
-					</div>
-				</div>
-				
+				</div>	
 			</div>
 		</div>
 	<script src="../js/init.js"></script>

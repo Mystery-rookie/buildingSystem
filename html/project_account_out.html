@@ -13,12 +13,13 @@
 	<meta http-equiv="Expires" content="-1">
 	<meta http-equiv="Cache-Control" content="no-cache">
 	<script src="../public/js/jquery-1.8.2.min.js"></script>
+	<script src="../js/backPage.js"></script>
 	<title>项目结算支出</title>
 </head>
 <body>
 	<div class="t_wrap">
 		<div class="l_wrap">
-			<a href="">
+			<a href="javascript:void(0)">
 				<img src="../img/向左.png" alt="">
 			</a>
 		</div>
@@ -77,10 +78,13 @@
 		<div class="list">
 			<div class="total_list">
 				<div class="td">
-					<span>工资支出</span>
+					<span>工资</span>
 				</div>
 				<div class="dd">
 					<span>180万</span>
+				</div>
+				<div class="down">
+					<img src="../img/down.png" alt="">
 				</div>
 			</div>
 			<div class="intro intro_out">
@@ -109,7 +113,7 @@
 		<div class="list">
 			<div class="total_list">
 				<div class="td">
-					<span>工资支出</span>
+					<span>租赁费</span>
 				</div>
 				<div class="dd">
 					<span>180万</span>
@@ -120,7 +124,7 @@
 		<div class="list">
 			<div class="total_list">
 				<div class="td">
-					<span>工资支出</span>
+					<span>报销费</span>
 				</div>
 				<div class="dd">
 					<span>180万</span>
@@ -131,35 +135,12 @@
 		<div class="list">
 			<div class="total_list">
 				<div class="td">
-					<span>工资支出</span>
+					<span>其它</span>
 				</div>
 				<div class="dd">
 					<span>180万</span>
 				</div>
-			</div>
-			
-		</div>
-		<div class="list">
-			<div class="total_list">
-				<div class="td">
-					<span>工资支出</span>
-				</div>
-				<div class="dd">
-					<span>180万</span>
-				</div>
-			</div>
-			
-		</div>
-		<div class="list">
-			<div class="total_list">
-				<div class="td">
-					<span>工资支出</span>
-				</div>
-				<div class="dd">
-					<span>180万</span>
-				</div>
-			</div>
-			
+			</div>	
 		</div>
 	</div>
 	<script src="../js/init.js"></script>
@@ -168,14 +149,16 @@
 			$(".in_out_wrap").on("click",".total_list",function(){
 				$(this).siblings(".intro").slideToggle(500);
 				// 上滑
-			// 鼠标点击状态
-			var click_static=false;
-			var mX,mY;
-			$(".in_out_wrap .icon_up").on("click","img",function(e){
-					$(this).parents(".intro").slideUp(500);
+				// 鼠标点击状态
+				var click_static=false;
+				var mX,mY;
+				$(".in_out_wrap .icon_up").on("click","img",function(e){
+						$(this).parents(".intro").slideUp(500);
+				})
 			})
 			// 选择项目部
 			$(".select_project .select").on("click",function(){
+				console.log($(this))
 				$(this).siblings(".project_list_wrap").slideToggle(500);
 			})
 			// 选择项目部
@@ -185,7 +168,6 @@
 				$(this).parents(".project_list_wrap").hide();
 			})
 			
-		})
 		})
 	</script>
 </body>

@@ -14,11 +14,12 @@
 	<meta http-equiv="Cache-Control" content="no-cache">
 	<script src="../public/js/jquery-1.8.2.min.js"></script>
 	<title>转账查询</title>
+	<script src="../js/backPage.js"></script>
 </head>
 <body>
 	<div class="t_wrap">
 		<div class="l_wrap">
-			<a href="">
+			<a href="javascript:void(0)">
 				<img src="../img/向左.png" alt="">
 			</a>
 		</div>
@@ -61,10 +62,10 @@
 					<span class="td">利润</span>
 					<img src="../img/down.png" alt="">
 					<div class="down">
-						<p><a href="income.html">全部类型</a></p>
-						<p><a href="expend.html">他人转入</a></p>
-						<p><a href="expend.html">甲方付款</a></p>
-						<p><a href="expend.html">财务转出</a></p>
+						<p><a href="javascirpt:void(0)">全部类型</a></p>
+						<p><a href="javascirpt:void(0)">他人转入</a></p>
+						<p><a href="javascirpt:void(0)">甲方付款</a></p>
+						<p><a href="javascirpt:void(0)">财务转出</a></p>
 					</div>
 				</li>
 			</ul>
@@ -130,25 +131,28 @@
 		</div>
 	<script src="../js/init.js"></script>
 	<script>
-		// 初始化年份
 		// 获取当前月份
-		var mydate = new Date();
-		// 给月份赋值
-		var old_date = mydate.toLocaleDateString();
-		var arr = old_date.split("/");
+	var mydate = new Date();
+	// 给月份赋值
+	var old_date = mydate.toLocaleDateString();
+	var arr = old_date.split("/");
 
-		var new_date = "";
-		for (var i = 0; i < arr.length - 1; i++) {
-			if (i > 0) {
-				new_date += "."
-			}
-			new_date += arr[i];
+	var new_date = "";
+	for (var i = 0; i < arr.length - 1; i++) {
+		if (i > 0&&arr[i].length<2) {
+			new_date += "年";
+			new_date +="0"+arr[i];
+		}else{
+			new_date +=arr[i];
 		}
-		var new_date_text = "本月（" + new_date + "）";
+		
+	}
+	new_date+="月";
+	var new_date_text = "本月（" + new_date + "）";
 		// 给本月赋值
 		$(".up_list .td").text(new_date_text);
 		// 给下拉框选择月份赋值
-		var Html1 = "<p class='list1'>" + new_date_text + "</p>"
+		var Html1 = "<p class='list1'>" + new_date + "</p>";
 		$(".up_down_wrap").append(Html1);
 		//添加今年其它月份
 
@@ -158,9 +162,14 @@
 		var month = arr[1] * 1;
 		// 循环月份
 		for (var i = 1; i < month; i++) {
-			var Html = "<p class='list2'>" + year + "." + i + "</p>";
-			$(".up_down_wrap").append(Html);
+		if(i<10){
+			var Html = "<p class='list2'>" + year + "年" + "0"+i+ "月" + "</p>";
+		}else{
+			var Html = "<p class='list2'>" + year + "年" +i+ "月" + "</p>";
 		}
+		
+		$(".up_down_wrap").append(Html);
+	}
 
 		$(".proect_profit .select_list").on("click", "li", function() {
 			$(this).find(".down").slideToggle(500);
@@ -172,12 +181,10 @@
 		})
 		$(".up_down_wrap").on("click", "p", function() {
 			var text = $(this).text();
-			var m = text.substr(text.length - 1, 1) * 1;
-			var index = 1;
-			while (isNaN(m)) {
-				index++;
-				m = text.substr(text.length - index, 1) * 1;
+			if(text==new_date){
+				text="本月（"+text+"）";
 			}
+			var m = text.substr(text.length - 3, 2) * 1;
 			$(this).parents(".up_down_wrap").hide().siblings(".up_list").find(".td").text(text);
 		})
 
@@ -191,7 +198,7 @@
 					year += 1;
 					break;
 			}
-			var content = year + ".1";
+			var content = year + "年1月";
 			$(this).siblings(".center").find(".td").text(content);
 			if (year < arr[0]) {
 
@@ -204,13 +211,28 @@
 			if (!select_month) {
 				$(this).siblings(".center").find(".up_down_wrap").children().remove();
 				for (var i = 1; i <= 12; i++) {
-					var text = "<p class='list2'>" + year + "." + i + "</p>";
-					$(this).siblings(".center").find(".up_down_wrap").append(text);
+				if(i<10){
+					var text = "<p class='list2'>" + year + "年" +"0" + i + "月" + "</p>";
+				}else{
+					var text = "<p class='list2'>" + year + "年"  + i + "月" + "</p>";
 				}
+				
+				$(this).siblings(".center").find(".up_down_wrap").append(text);
+			}
 				select_month = true;
 			}
 
+			// 选择项目部
+			
+
 		})
+		console.log($(".select_list .down"))
+			$(".select_list .down").on("click","p",function(){
+
+				var text=$(this).text();
+				console.log(123)
+				$(this).parents(".down").siblings(".td").text(text);
+			})
 
 
 

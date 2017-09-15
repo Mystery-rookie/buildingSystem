@@ -3,12 +3,11 @@
 	window.addEventListener("load", function() {
 
 		// 拿到所有的侧栏数据分点
-		console.log($(".chart_up .data"))
 			// 标记点大小
 		var W = Math.floor(width * 30 / 750);
 		var N = Math.floor(width * 15 / 750);
 
-		var data = [38, 78, 108, 208, 118, 238];
+		var data = [54, 78, 108, 208, 118, 238];
 
 		// 左侧数据导航存储
 		var arrData = [];
@@ -161,16 +160,20 @@ $(function() {
 
 	var new_date = "";
 	for (var i = 0; i < arr.length - 1; i++) {
-		if (i > 0) {
-			new_date += "."
+		if (i > 0&&arr[i].length<2) {
+			new_date += "年";
+			new_date +="0"+arr[i];
+		}else{
+			new_date +=arr[i];
 		}
-		new_date += arr[i];
+		
 	}
+	new_date+="月";
 	var new_date_text = "本月（" + new_date + "）";
 	// 给本月赋值
 	$(".up_list .td").text(new_date_text);
 	// 给下拉框选择月份赋值
-	var Html1 = "<p class='list1'>" + new_date_text + "</p>"
+	var Html1 = "<p class='list1'>" + new_date + "</p>"
 	$(".up_down_wrap").append(Html1);
 	//添加今年其它月份
 
@@ -180,7 +183,12 @@ $(function() {
 	var month = arr[1] * 1;
 	// 循环月份
 	for (var i = 1; i < month; i++) {
-		var Html = "<p class='list2'>" + year + "." + i + "</p>";
+		if(i<10){
+			var Html = "<p class='list2'>" + year + "年" + "0"+i+ "月" + "</p>";
+		}else{
+			var Html = "<p class='list2'>" + year + "年" +i+ "月" + "</p>";
+		}
+		
 		$(".up_down_wrap").append(Html);
 	}
 
@@ -197,13 +205,10 @@ $(function() {
 	})
 	$(".up_down_wrap").on("click", "p", function() {
 			var text = $(this).text();
-			var m = text.substr(text.length - 1, 1) * 1;
-			var index = 1;
-			while (isNaN(m)) {
-				index++;
-				m = text.substr(text.length - index, 1) * 1;
+			if(text==new_date){
+				text="本月（"+text+"）";
 			}
-			console.log(m);
+			var m = text.substr(text.length - 3, 2) * 1;
 			initDate(m);
 			$(this).parents(".up_down_wrap").hide().siblings(".up_list").find(".td").text(text);
 		})
@@ -219,7 +224,7 @@ $(function() {
 				year += 1;
 				break;
 		}
-		var content = year + ".1";
+		var content = year + "年1月";
 		$(this).siblings(".center").find(".td").text(content);
 		if (year < arr[0]) {
 
@@ -232,7 +237,12 @@ $(function() {
 		if (!select_month) {
 			$(this).siblings(".center").find(".up_down_wrap").children().remove();
 			for (var i = 1; i <= 12; i++) {
-				var text = "<p class='list2'>" + year + "." + i + "</p>";
+				if(i<10){
+					var text = "<p class='list2'>" + year + "年" +"0" + i + "月" + "</p>";
+				}else{
+					var text = "<p class='list2'>" + year + "年"  + i + "月" + "</p>";
+				}
+				
 				$(this).siblings(".center").find(".up_down_wrap").append(text);
 			}
 			select_month = true;
@@ -240,6 +250,14 @@ $(function() {
 		}
 
 	})
+	// 选择项目部
+	console.log($(".projectpart"))
+	$(".projectpart").on("click","p",function(){
+
+		var text=$(this).text();
+		$(this).parents(".projectpart").siblings(".td").text(text);
+	})
+
 
 	// 近六个月曲线图 日期初始化 函数
 	function initDate(m) {
@@ -247,12 +265,10 @@ $(function() {
 		for (var i = 0; i < 6; i++) {
 			arr_month.push(m + "月");
 			if (m > 1) {
-
 				m -= 1;
 			} else {
 				m = 12;
 			}
-
 		}
 		$(".chart_down li").each(function(i, c) {
 			$(c).text(arr_month[5 - i]);
